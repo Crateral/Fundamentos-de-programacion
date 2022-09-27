@@ -1,0 +1,246 @@
+Si hace sol Y salgo temprano voy al parque
+
+p = Si hace sol
+q = si salgo temprano
+r = voy al parque
+
+P    Q     R
+1    1     1
+0    1     0
+1    0     0
+0    0     0
+
+1    1     1
+0    1     1
+1    0     1
+0    0     0
+
+P   P'
+1   0
+0   1
+
+-->
+
+Si salgo electo recibiran un aumento
+
+P		Q       P --> Q
+1		1	   1
+1       	0    	   0
+0     		      1	   1
+0       	0          1
+
+Es buen estudiante, si y solo si, tiene promedio de 10
+
+P: es buen estudiante
+Q: tiene promedio de 10
+
+P		Q		P <--> Q
+1		1			1
+1		0			0
+0		1			0
+0		0			1
+
+
+EJERCICIOS:
+
+1. El número 10 es un entero par
+
+p = el numero 10
+
+q = entero par
+
+P	Q	P→Q
+1	1	1
+0	1	0
+0	0	0
+1	0	0
+
+
+
+2. Si no hace frio me pondre pantalones cortos
+
+p = no hace frio
+
+q = me pondre pantalones cortos 
+
+
+P	Q	P¹	P --> Q
+1	1	1   	1
+0	0	1   	1
+0	1	0   	1
+1	0	1   	0
+
+
+
+
+3. Si voy a cine a las 10pm, entonces podria acostarme tarde
+
+p = voy a cine a las 10pm
+
+q= podria acostarme tarde
+
+
+P	Q	P --> Q
+1	1	   1
+0	1	   1
+0	0	   1
+1	0	   0 
+
+
+
+
+
+4. Llegare a tiempo a la cita medica, si y solo si, me levanto temprano y desayuno bien
+
+p = llegare a tiempo a la cita medica
+
+q = me levanto temprano 
+
+r = desayuno bien 
+
+
+P	Q	R	P <-->  	(q ∧ r)
+1	1	1	   1 		    1
+1	1	0	   0		    1
+1	0	1	   0		    0
+1	0	0	   1                0
+0	1	1          0                0
+0	1	0          1                0
+0	0	1          0                0
+0	0	1          0                0
+
+
+
+
+
+5. Si monto bici y como saludable bajere de peso 
+
+p = monto bici
+
+q = como saludable
+
+r = bajare de peso
+
+
+P	Q	R	P Y Q		-->R
+1	1	1	  1		   1
+0	1	1	  0		   1
+1	0	0	  0 		   0
+0	0	0	  0                0
+
+
+
+
+
+6.Para ir a Santa Marta puedo tomar la ruta del sol o tomar carretera entre pueblos
+
+p =  tomar la carretera entre pueblos
+
+q = tomar la ruta del sol 
+
+
+P	Q	P o Q
+1	1	  1
+0	1	  1
+1	0	  1
+0	0	  0
+
+
+
+
+7. Puedo ver la pelicula de terror, si y solo si, si no soy menor de edad
+
+p = ver la pelicula
+
+q = si no soy menor de edad 
+
+
+P	Q	Q¹	P <--> Q
+1	1	 1          1
+0	1	 0          0
+0	0	 0          0
+1	0	 0          0
+
+
+
+
+
+8. Si no pago la luz, entonces me contaran la energia. Y si pago la luz, entonces me quedare sin plata o pedire prestado
+
+p¹ = no pago la luz
+
+p = pago la luz
+
+q = me cortaran la energia 
+
+r = me quedare sin plata
+
+s = pedire prestado
+
+
+(p¹-->Q) ∧ P --> (R v S)
+
+
+P	p¹	Q	R	S	(p¹-->Q)	(R v S)		P --> (R v S)		(p¹-->Q) ∧ P --> (R v S)
+
+1	0	1	1	1	1		1			1				1
+1	0	1	1	0	1		1			1				1
+1	0	1	0	1	1		1			1				1
+1	0	1	0	0	1		0			0				0	
+1	0	0	1	1	1		1			1				1
+1	0	0	1	0	1		1			1				1	
+1	0	0	0	1	1		1			1				1	
+1	0	0	0	0	1		0			0				0
+0	1	1	1	1	1		1			1				1
+0	1	1	1	0	1		1			1				1
+0	1	1	0	1	1		1			1				1
+0	1	1	0	0	1		0			1				1
+0	1	0	1	1	0		1			1				0	
+0	1	0	1	0	0		1			1				0
+0	1	0	0	1	0		1			1				0	
+0	1	0	0	0	0		0			1				0	
+
+
+
+
+
+
+
+
+
+
+
+
+
+9. Si ahorro podre comprarme el carro de mis sueños
+
+p = ahorro
+
+q = podre comprarme el carro de mis sueños 
+
+
+P	Q	P→Q
+1	1	1
+0	1	0
+0	0	0
+1	0	1
+
+
+
+10. Si salgo con la chica que me gusta sere feliz
+
+
+p = salgo con la chica que me gusta
+
+q = sere feliz
+
+
+P	Q	P --> Q
+1	1	   1
+0	1	   0
+1	0	   0
+0	0	   0
+
+
+
+
