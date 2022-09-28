@@ -1,0 +1,158 @@
+1. el número 10 es un entero par 
+
+    p  'p
+    1   0
+    0   1
+
+
+2. si no hace frio me pondré pantalones cortos
+
+
+p= si no hace frio
+q= me pondré pantalones cortos
+
+
+p   q     p--> q 
+
+1   1     1
+1   0     0
+0   1     1
+0   0     1
+
+
+3. si voy al cine a las 10pm, entonces podría acostarme tarde. 
+
+p  q    p--> 
+
+1  1    1
+1  0    0
+0  1    1
+0  0    1
+
+
+4. llegaré a tiempo a la cita medica, si y solo si, me levanto temprano y desayuno bien.
+
+
+p= llegaré temprano a la cita medica 
+q= me levanto temprano
+r= desayuno bien 
+
+p<--> (q^ r)
+
+p  q   r    p <-->   (q ^ r )
+
+1  1   1       1       1     
+1  1   0       0       0
+1  0   1       0       0
+1  0   0       1       0
+0  1   1       0       0
+0  1   0       1       0
+0  0   1       0       0
+0  0   1       0       0
+
+5. si monto bici y como saludable bajaré de peso.
+
+p = monto bici
+q= como saludable
+r = bajaré de peso
+
+p  q  r    p ^q   (p^q) --> r
+
+1  1  1      1        1
+1  1  0      1        0
+1  0  1      0        1
+1  0  0      0        1
+0  1  1      0        1
+0  1  0      0        1
+0  0  1      0        1
+0  0  0      0        1
+
+
+6. para ir a santa marta puedo tomar la ruta del sol o tomar carreteras entre pueblos
+
+p  q    p v q
+
+1  1    1
+1  0    1
+0  1    1
+0  0    0
+
+
+7.  puedo ver la pélicula de terror, si y solo si, si no soy menor de edad.
+
+p= puedo ver pelicula de terror
+q= no soy menor de edad
+
+p  q   p <--> ´q
+
+1  1     1
+1  0     0
+0  1     1
+0  0     1
+
+
+8. si no pago la luz, entonces me cortarán la energía. y si pago la luz entonces me quedaré sin plata o pediré prestado.
+
+p= pago la luz
+q= cortarán la energía
+r= me quedo sin plata
+s= pediré prestado
+
+(´p --> q)  ∧ p --> (r v s)
+
+p ´p  q  r  s  (´p -->q)  (rvs)  p-->(rvs)  (´p-->q) ∧ p --> (rvs)
+1  0  1  1  1    1         1        1         1           
+1  0  1  1  0    1         1        1         1           
+1  0  1  0  1    1         1        1         1           
+1  0  1  0  0    1         0        0         0           
+1  0  0  1  1    1         1        1         1           
+1  0  0  1  0    1         1        1         1            
+1  0  0  0  1    1         1        1         1           
+1  0  0  0  0    1         0        0         0           
+0  1  1  1  1    1         1        1         1           
+0  1  1  1  0    1         1        1         1           
+0  1  1  0  1    1         1        1         1           
+0  1  1  0  0    1         0        1         1
+0  1  0  1  1    0         1        1         0
+0  1  0  1  0    0         1        1         0
+0  1  0  0  1    0         0        0         0
+0  1  0  0  0    0         0        1         0
+
+
+
+
+
+
+
+
+9. si ahorro podré comprarme el carro de mis sueños. 
+
+p= si ahorro
+q= podré comprarme el carro de mis suenos 
+
+p  q   p-->q 
+
+1  1   1
+1  0   0
+0  1   1
+0  0   1
+
+
+
+10. si salgo con la chica que me gusta seré feliz 
+
+p  q  p--> q
+
+1  1  1
+1  0  0
+0  1  1
+0  0  1
+
+
+
+
+
+
+
+
+
