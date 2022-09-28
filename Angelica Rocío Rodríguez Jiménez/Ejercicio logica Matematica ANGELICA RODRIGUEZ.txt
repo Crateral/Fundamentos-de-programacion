@@ -1,0 +1,205 @@
+Si hace sol Y salgo temprano voy al parque
+
+p = Si hace sol
+q = si salgo temprano
+r = voy al parque
+
+P    Q     R
+1    1     1
+0    1     0
+1    0     0
+0    0     0
+
+1    1     1
+0    1     1
+1    0     1
+0    0     0
+
+P   P'
+1   0
+0   1
+
+-->
+
+Si salgo electo recibiran un aumento
+
+P		Q       P --> Q
+1		1          1
+1               0    	   0
+0               1          1
+0               0          1
+
+Es buen estudiante, si y solo si, tiene promedio de 10
+
+P: es buen estudiante
+Q: tiene promedio de 10
+
+P		Q		P <--> Q
+1		1		    1
+1		0		    0
+0		1		    0
+0		0		    1
+
+
+EJERCICIOS:
+
+1. El número 10 es un entero par
+2. Si no hace frio me pondre pantalones cortos
+3. Si voy a cine a las 10pm, entonces podria acostarme tarde
+4. Llegare a tiempo a la cita medica, si y solo si, me levanto temprano y desayuno bien
+5. Si monto bici y como saludable bajere de peso
+6.Para ir a Santa Marta puedo tomar la ruta del sol o tomar carretera entre pueblos
+7. Puedo ver la pelicula de terror, si y solo si, si no soy menor de edad
+8. Si no pago la luz, entonces me contaran la energia. Y si pago la luz, entonces me quedare sin plata o pedire prestado
+9. Si ahorro podre comprarme el carro de mis sueños
+10. Si salgo con la chica que me gusta sere feliz
+
+DESARROLLO DE LA ACTIVIDAD.
+
+1.
+P= NUEMRO 10 ENTERO PAR
+Q= PAR
+
+P     Q     P-->Q
+1     1     1
+1     0     0
+0     1     1
+0     0     1
+
+
+
+2.
+P= SI NO HACE FRIO
+Q= COLOCARSE PANTALONES CORTOS
+
+
+P       Q     P´   P´-->
+1       1     0      1
+0       1     1      1   
+1       0     0      1 
+0       0     1      1
+
+
+3.
+P= SI VOY AL CINE
+Q= ACOSTARSE TARDE
+
+P     Q     P-->Q
+1     1      1
+1     0      0
+0     1      1
+0     0      1
+
+
+4.
+P= LLEGAR A CITA MEDICA
+Q= LEVANTARSE TEMPRANO Y DESAYUNAR BIEN
+R= DESAYUNAR BIEN
+
+P      Q     R    P<--> Q   (P<-->Q) Y R
+1      1            1           1 
+1      0            0           0 
+0      1            0           0
+0      0            1           0 
+
+
+
+
+5.
+P= MONTAR BICI
+Q= COMER SALUDABLE
+
+
+P      Q      R     P Y Q     (P Y Q)--> R
+1      1      1	      1             1
+1      0      0       0             1
+0      1      1       0             1
+0      0      0       0             1
+
+
+
+
+6.
+P= RUTA DEL SOL
+Q=CARRETERA ENTRE PUEBLOS
+
+P     Q     P O Q
+1     1      1
+0     1      1
+1     0      1
+0     0      0
+
+
+7.
+P= VER PELICULAS DE TERROR
+Q=SI SOY MENOR DE EDAD
+
+P      Q´      P<-->Q´
+1      1         1
+1      0         0
+0      1         0
+0      0         1
+ 
+
+
+8. 
+P= PAGAR LA LUZ
+P´=NO PAGAR LA LUZ
+Q= CORTAR ENERGIA
+R= SIN DINERO
+S= PEDIR PRESTADO
+
+(P'-->Q) Y [P-->(R O S)]
+
+P    P´    Q     R    S   P´-->Q    R O S    P-->(R O S)    P´->Q Y P->(R O S) 
+1    0     1     1    1      1        1           1               1      
+1    0     1     1    0      1        1           1               1
+1    0     1     0    1      1        1           1               1
+1    0     1     0    0      1        0           0               0
+1    0     0     1    1      1        1           1               1
+1    0     0     1    0      1        1           1               1
+1    0     0     0    1      1        1           1               1
+1    0     0     0    0      1        0           0               0
+0    1     1     1    1      1        1           1               1
+0    1     1     1    0      1        1           1               1
+0    1     1     0    1      1        1           1               1
+0    1     1     0    0      1        0           1               1
+0    1     0     1    1      0        1           1               0
+0    1     0     1    0      0        1           1               0
+0    1     0     0    1      0        1           1               0
+0    1     0     0    0      0        0           1               0
+
+
+9.
+P= SI AHORRO
+Q= COMPRAR EL CARRO DE MIS SUEÑOS
+
+
+P      Q     P-->Q
+1      1       1
+1      0       0
+0      1       1
+0      0       1
+
+
+
+10.
+P= SALIR CON LA CHICA 
+Q=QUE ME GUSTA
+R= SERE FELIZ
+
+P      Q       R
+1      1       1
+1      0       0
+0      1       0
+0      0       0
+
+
+
+
+
+
+
+
+
+
