@@ -1,0 +1,120 @@
+import java.util.Scanner;
+
+class Main {  
+
+  private static int suma(int num1, int num2){
+    return num1+num2;
+  }
+
+    private static int resta(int num1, int num2){
+    return num1-num2;
+  }
+
+  private static int multiplicacion(int num1, int num2){
+    return num1*num2;
+  }
+
+  private static int division(int num1, int num2){
+    return num1/num2;
+  }
+
+  
+  public static void main(String args[]) { 
+
+    Scanner teclado=new Scanner(System.in);
+
+         int op1=0;
+                
+     do {
+          System.out.println("Bienvenido a mi primer programa - Realiza operaciones de dos numeros  - Para salir presione el numero 5");
+       
+        System.out.println("1 - Suma");
+        System.out.println("2 - Resta");
+        System.out.println("3 - Multiplicacion");
+        System.out.println("4 - Division");
+        System.out.println("5 - Salir");
+
+        op1=Integer.parseInt(teclado.next());
+        
+
+        switch (op1){
+            case 1:
+              System.out.println("Digite Numero 1");
+              int numx=Integer.parseInt(teclado.next());
+              System.out.println("Digite Numero 2");
+              int numy=Integer.parseInt(teclado.next());
+            
+              int num3=suma(numx,numy);
+              System.out.println("");
+
+            System.out.println("El resultado de la suma   es: " +num3);
+        System.out.println("");
+        }
+
+        switch (op1){
+            case 2:
+        System.out.println("Digite Numero 1");
+              int numx=Integer.parseInt(teclado.next());
+              System.out.println("Digite Numero 2");
+              int numy=Integer.parseInt(teclado.next());
+            
+              int num3=resta(numx,numy);
+              System.out.println("");
+
+            System.out.println("El resultado de la resta   es: " +num3);
+        System.out.println("");
+
+            
+        }          
+
+
+        switch (op1){
+            case 3:
+              System.out.println("Digite Numero 1");
+              int numx=Integer.parseInt(teclado.next());
+              System.out.println("Digite Numero 2");
+              int numy=Integer.parseInt(teclado.next());
+            
+              int num3=multiplicacion(numx,numy);
+              System.out.println("");
+
+            System.out.println("El resultado de la multiplicacion  es: " +num3);
+        System.out.println("");
+
+
+            
+        }         
+
+       
+        switch (op1){
+            case 4:
+              System.out.println("Digite Numero 1");
+              int numx=Integer.parseInt(teclado.next());
+              System.out.println("Digite Numero 2");
+              int numy=Integer.parseInt(teclado.next());
+
+              if (numy==0){
+                System.out.println("");
+                System.out.println("El numero ingresado no debe ser cero (0)");
+              System.out.println("");
+              }
+                
+                else{
+              int num3=division(numx,numy);
+              System.out.println("");
+
+            System.out.println("El resultado de la division   es: " +num3);
+        System.out.println("");
+
+                }
+                 
+        }         
+
+       
+     
+       } while (op1!=5); 
+
+             
+
+  } 
+}
