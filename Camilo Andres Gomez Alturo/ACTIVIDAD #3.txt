@@ -1,0 +1,246 @@
+EJERCICIO
+
+PUNTO NUMERO #1   
+
+                                    
+
+public class Figuras {
+    
+    private String nombre;
+    private String lados;
+
+    public Figuras(String nombre, String lados) {
+        this.nombre = nombre;
+        this.lados = lados;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public String getLados() {
+        return lados;
+    }   
+}
+
+
+
+
+
+public class Cuadrado extends Figuras{
+      
+  private int LadosIguales;
+
+    public Cuadrado(String nombre, String lados) {
+        super(nombre, lados);
+        this.LadosIguales = LadosIguales;
+        
+  }
+           
+    public void mostrarDatos(){
+    System.out.println("nombre:"+getNombre()+
+            
+     "\nlado:"+getLados()+
+            
+        "\nlados iguales:"+LadosIguales);
+    
+    }   
+    
+}
+
+
+
+
+
+
+
+public class ClasePrincipal {
+    
+    
+     public static void main (String [] args){
+         
+     Cuadrado Cuadrado = new Cuadrado ("cuadrado","cuatro" );
+     
+     
+         Cuadrado.mostrarDatos();
+     
+     }}
+
+
+
+
+
+
+
+
+
+
+EJERCICIO #2
+
+public class Vehiculos {
+     
+    private String Nombre;
+    private String Marca;
+    private int Modelo;
+
+    public Vehiculos(String Nombre, String Marca, int Modelo) {
+        this.Nombre = Nombre;
+        this.Marca = Marca;
+        this.Modelo = Modelo;
+    }
+
+    public String getNombre() {
+        return Nombre;
+    }
+
+    public String getMarca() {
+        return Marca;
+    }
+
+    public int getModelo() {
+        return Modelo;
+    }
+     
+    
+    
+  }
+
+
+
+
+
+
+public class Moto extends Vehiculos{
+    
+    private int Motor;
+    private String Chasis;
+    private String Llantas;
+    
+    public Moto (String Nombre,String Marca,int Modelo,int motor,String Chasis,String Llantas){
+        super(Nombre,Marca,Modelo);
+        this. Motor = Motor;
+        this. Chasis = Chasis;
+        this.Llantas = Llantas;
+    }
+         public void MostrarDatos(){
+        System.out.println("Nombre:"+getNombre()+
+        "\nMarca:"+getMarca()+
+        "\nModelo:"+getModelo()+
+        "\nMotor:"+Motor+
+        "\nChasis:"+Chasis+
+        "\nLlantas:"+Llantas );
+        
+        
+        }
+            
+            
+        }
+        
+
+
+
+EJERCICIO #3
+
+
+
+public class Empresa {
+    private String Bodega;
+    private String Personal;
+    private String Vehiculos;
+    private int Rutas;
+.- 
+    public Empresa(String Bodega, String Personal, String Vehiculos, int Rutas) {
+        this.Bodega = Bodega;
+        this.Personal = Personal;
+        this.Vehiculos = Vehiculos;
+        this.Rutas = Rutas;
+    }
+
+    public String getBodega() {
+        return Bodega;
+    }
+
+    public String getPersonal() {
+        return Personal;
+    }
+
+    public String getVehiculos() {
+        return Vehiculos;
+    }
+
+    public int getRutas() {
+        return Rutas;
+    }
+    
+    
+}
+
+
+
+
+
+public class Mercancia extends Empresa {
+      private String Peligrosas;
+      private String Fragiles;
+      private String Perecederas;
+        
+      
+      public Mercancia (String Bodega, String Personal, String Vehiculos, int Rutas, String Peligrosas, String Fragiles, String Perecederas ){
+      
+          super (Bodega, Personal, Vehiculos, Rutas);
+          this. Peligrosas = Peligrosas;
+          this.Fragiles = Fragiles;
+          this.Perecederas = Perecederas;
+          
+      }
+    public void MostrarDatos (){
+    System.out.println("Bodega:"+getBodega()+
+                      "\nPersonal:"+getPersonal()+
+                        "\nVehiculos:"+getVehiculos()+ 
+                          "\nRutas:"+getRutas()+
+                            "\nPeligrosas:"+Peligrosas+
+                              "\nFragiles:"+Fragiles+
+                                 "\nPerecederas:"+Perecederas);
+    
+    }
+      
+      }
+
+
+
+
+
+
+
+
+
+public class Principal {
+    public static void main(String [] args){
+        
+        Mercancia Mercancia = new Mercancia ("invetario de la mercancia", "Autorizado", "Camiones", 4, "tinner", "pintura","removedor" );
+        
+        Mercancia.MostrarDatos();
+    }}
+
+
+
+
+
+
+
+
+public class Principal {
+    
+   public static void main(String [] args){
+   
+   Moto   Moto = new Moto ("yz","YAMAHA",2022,125,"ASERO","GOMA" );
+   
+   
+  Moto.MostrarDatos();
+       
+   } 
+}
+
+
+
+
