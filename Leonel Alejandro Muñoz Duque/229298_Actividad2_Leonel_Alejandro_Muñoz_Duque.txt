@@ -1,0 +1,130 @@
+Actividad 2:
+
+1. Crear las siguiente Clase: Operaciones
+	1.1 Crear los siguientes metodos:
+		Suma, resta, multiplicacion y division (no sebe ser posible dividir por 0)
+	1.2 Realizar la implementacion de los metodos, es decir, debo poder sumar restar multiplicar y dividir
+
+public class Operaciones {
+
+    int a = 2, b = 0, suma, resta, multiplicacion;
+    float division;
+
+    public Operaciones() {
+
+    }
+
+    public int sumar() {
+        suma = a + b;
+        return suma;
+    }
+
+    public int restar() {
+        resta = a - b;
+        return resta;
+    }
+
+    public int multiplicar() {
+        multiplicacion = a * b;
+        return multiplicacion;
+    }
+
+    public float dividir() {
+        if (a == 0) {
+            System.out.println("El resultado es cero.");
+        } else if (b == 0) {
+            System.out.println("No es posible dividir entre cero");   
+        } else {
+            division = a / b;
+            System.out.println("Elresultado de la division es: " + division);
+        }
+        return division;
+    }
+}
+
+
+public class ResultadoOperaciones {
+
+    public static void main(String[] args) {
+        Operaciones result = new Operaciones();
+
+        System.out.println("Resultado de la suma es: " + result.sumar());
+        System.out.println("Resultado de la resta es: " + result.restar());
+        System.out.println("Resuktado de la multiplicacion es: " + result.multiplicar());
+        System.out.println("Resultado de la division es: " + result.dividir());
+    }
+}
+
+
+
+2. Crear una clase donde tenga 2 metoso implementados: Cronometro, temporizador.
+
+
+CRONOMETRO
+
+public class JavaClock {
+
+    public static void main(String[] args) throws InterruptedException{
+
+        for(int hour = 0; hour < 12; hour++){
+
+            for(int min = 0; min < 60; min++){
+
+                for(int seg = 0; seg < 60; seg++){
+
+                    System.out.print(hour + ":" + min + ":" + seg);
+
+                    Thread.sleep(1000);
+                }
+            }
+        }
+    }    
+}
+
+
+TEMPORIZADOR
+
+public class Tiempo {
+
+    public static void main(String[] args) throws InterruptedException {
+        int hour = 0, min = 1, seg = 10;
+
+        while (hour != 0 && min != 0 && seg != 0) {
+            if (hour < 10) {
+                System.out.print("0" + hour);
+            } else {
+                System.out.print(hour);
+            }
+            System.out.print(":");
+
+            if (min < 10) {
+                System.out.print("0" + min);
+            } else {
+                System.out.print(min);
+            }
+            System.out.print(":");
+
+            if (seg < 10) {
+                System.out.print("0" + seg);
+            } else {
+                System.out.print(seg);
+            }
+            System.out.println("");
+
+            if (seg == 0) {
+                if (min == 0) {
+                    hour--;
+                    min = 59;
+                    seg = 59;
+                } else if (min != 0) {
+                    min--;
+                    seg = 59;
+                }
+            } else {
+                seg--;
+            }
+            Thread.sleep(1000);
+        }
+
+    }
+}

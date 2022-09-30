@@ -1,0 +1,200 @@
+Si hace sol Y salgo temprano voy al parque
+
+p = Si hace sol
+q = si salgo temprano
+r = voy al parque
+
+P    Q     R
+1    1     1
+0    1     0
+1    0     0
+0    0     0
+
+1    1     1
+0    1     1
+1    0     1
+0    0     0
+
+P   P'
+1   0
+0   1
+
+-->
+
+Si salgo electo recibiran un aumento
+
+P		Q       P --> Q
+1		1		   1
+1       0    	   0
+0       1		   1
+0       0          1
+
+Es buen estudiante, si y solo si, tiene promedio de 10
+
+P: es buen estudiante
+Q: tiene promedio de 10
+
+P		Q		P <--> Q
+1		1			1
+1		0			0
+0		1			0
+0		0			1
+
+
+EJERCICIOS:
+
+1. El número 10 es un entero par
+p:el numero 10 
+q:entero par 
+
+	p	q	p-->q
+	1	1	1
+	0	1	1
+	1	0	0
+	0	0	1
+	
+2. Si no hace frio me pondre pantalones cortos
+p:si no hace frio
+q:me pondre pantalones cortos
+
+	p	q	-p	-p-->q 
+	1	1	0	  0
+	0	1	1	  1
+	1	0	0	  1
+	0	0	1	  0
+
+3. Si voy a cine a las 10pm, entonces podria acostarme tarde
+p:si voy a cine a las 10 pm
+q:podria acostarme tarde
+
+	p	q	p-->q	
+	1	1	1
+	0	1	1
+	1	0	0
+	0	0	1
+
+4. Llegare a tiempo a la cita medica, si y solo si, me levanto temprano y desayuno bien (P)
+p:Llegare a tiempo a la cita medica
+q:me levanto temprano
+r:Desayuno bien
+
+P	Q	R
+1	1	1
+1	1	0
+1	0	1
+1	0	0
+0	1	1
+0	1	0
+0	0	1
+0	0	0
+
+	
+	p <-->  ( Q y R )					
+						
+P	Q	R	( Q y R )   p <-->  ( Q y R )		
+1	1	1	1		1		
+1	1	0	0		0		
+1	0	1	0		0		
+1	0	0	0		0		
+0	1	1	1		0		
+0	1	0	0		1		
+0	0	1	0		1		
+0	0	0	0		1		
+						
+
+5. Si monto bici y como saludable bajare de peso 
+p:Si monto bici
+q:como saludable 
+r bajar de peso 
+
+
+	(P y Q)--> R					
+						
+P	Q	R	(P y Q)	  (P y Q)--> R		
+1	1	1	1		1		
+1	1	0	1		0		
+1	0	1	0		1		
+1	0	0	0		1		
+0	1	1	0		1		
+0	1	0	0		1		
+0	0	1	0		1		
+0	0	0	0		1		
+						
+
+
+
+	
+6.Para ir a Santa Marta puedo tomar la ruta del sol o tomar carretera entre pueblos 
+p:Para ir a Santa Martha
+q:tomar la ruta del sol v tomar carretera entre pueblos
+
+	p	q	p v q
+	1	1	1
+	1	0	1
+	0	1	1
+	0	0	0	
+	
+
+7. Puedo ver la pelicula de terror, si y solo si, si no soy menor de edad (Negacion)
+p:Ver la pelicula de terror
+q:Si no soy menor de edad
+
+	P	Q	-Q	P<-->- Q 
+	1	1	 0	 1		
+	1	0	 1 	 0		
+	0	1	 0   	 0
+	0	0	 1       1
+
+8. Si no pago la luz, entonces me contaran la energia. Y si pago la luz, entonces me quedare sin plata o pedire prestado (P)
+p: Si no pago la luz, entonces me contaran la energia 
+q: si pago la luz, entonces me quedare sin plata 
+r: o pedire prestado
+
+
+P: pagar la luz
+P´:No pagar la luz
+Q: cortar energia 
+R: sin dinero 
+S: pedir prestado 
+	 
+	(P´-->q) Y  p-->(R o S) 
+	
+
+	(P´--> Q) Y P-->(R v S)							
+								
+P	P´	Q	R	S	(P´--> Q) 	(R v S) 	P-->(R v S)	(P´--> Q) Y P-->(R v S)
+1	0	1	1	1	1		1		1		1
+1	0	1	1	0	1		1	 	1		1
+1	0	1	0	1	1		1		1		1
+1	0	1	0	0	1		0		0		0
+1	0	0	1	1	1		1		1		1
+1	0	0	1	0	1		1		1		1
+1	0	0	0	1	1		1		1		1
+1	0	0	0	0	1		0		0		0
+0	1	1	1	1	1		1		1		1
+0	1	1	1	0	1		1		1		1
+0	1	1	0	1	1		1		1		1
+0	1	1	0	0	1		0		1		1
+0	1	0	1	1	0		1		1		0
+0	1	0	1	0	0		1		1		0
+0	1	0	0	1	0		1		1		0
+0	1	0	0	0	0		0		1		0
+
+
+9. Si ahorro podre comprarme el carro de mis sueños
+p: Si ahorro
+q:comprarme el carro de mis sueños
+	p	q	p-->q
+	1	1	1	
+	0	1	1
+	1	0	0
+	0	0	1
+
+10. Si salgo con la chica que me gusta sere feliz
+p: Si salgo con la chica que me gusta	
+q: sere feliz
+	p	q	p-->q	
+	1	1	1
+	0	1	1
+	1	0	0
+	0	0	1

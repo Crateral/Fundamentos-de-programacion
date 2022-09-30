@@ -1,0 +1,164 @@
+Actividad 2:
+
+1. Crear las siguiente Clase: Operaciones
+	1.1 Crear los siguientes metodos:
+		Suma, resta, multiplicacion y division (no debe ser posible dividir por 0)
+
+packstage operacionesbasicas;
+public class OperacionesBasicas {
+  public static void main(String[] aegs) {
+    String a = JOptionPane.showImputDialog(null, "ingrese el primer numero");
+   String b = JOptionPane.showImputDialog(null, "ingrese el segundo numero");
+  double n1 = Double.parseDouble(a);
+  double n2 = Double.parseDouble(b);
+  double suma = n1 + n2;
+  double resta = n1 - n2;
+  double mult = n1 * n2;
+  double div = n1 / n2;
+  JOptionPane.shoeMessageDialog(null, "Los resultados fueron: \n"+
+                               "La suma fue:" +suma+"\n"
+                               +"La resta fue:" +resta+"\n"
+                               +"La multiplicacion fue:" +mult+"\n"
+                               +"La division fue:" +div+"\n");
+    
+  }
+}
+
+
+	1.2 Realizar la implementacion de los metodos, es decir, debo poder sumar restar multiplicar y dividir
+
+
+class suma
+{
+  public static void Main(string [] args)
+  {
+     console.clear();
+     int num1;
+     int num2;
+     int total;
+     console.WriteLine("Digite el primer numero que desea sumar");
+     num1 =int.Parse(Console.ReadLine());
+     Console.WriteLine("Digete el segundo numero que desea sumar");
+     num2= int.Parse(Console.ReadLine());
+     total = num1+num2;
+     Console.WriteLine("El resultado de la suma es" + total);
+   
+     Console.ReadK
+  }
+}
+
+class resta
+{
+  public static void Main(string [] args)
+  {
+     console.clear();
+     int num1;
+     int num2;
+     int total;
+     console.WriteLine("Digite el primer numero que desea resta");
+     num1 =int.Parse(Console.ReadLine());
+     Console.WriteLine("Digete el segundo numero que desea resta");
+     num2= int.Parse(Console.ReadLine());
+     total = num1 - num2;
+     Console.WriteLine("El resultado de la resta es" - total );
+   
+     Console.ReadK
+  }
+}
+
+
+
+class mult
+{
+  public static void Main(string [] args)
+  {
+     console.clear();
+     int num1;
+     int num2;
+     int total;
+     console.WriteLine("Digite el primer numero que desea multiplicar");
+     num1 =int.Parse(Console.ReadLine());
+     Console.WriteLine("Digete el segundo numero que desea multiplicar");
+     num2= int.Parse(Console.ReadLine());
+     total = num1 * num2;
+     Console.WriteLine("El resultado de la multiplicacion es" * total );
+   
+     Console.ReadK
+  }
+}
+
+
+class Div
+{
+  public static void Main(string [] args)
+  {
+     console.clear();
+     int num1;
+     int num2;
+     int total;
+     console.WriteLine("Digite el primer numero que desea dividir");
+     num1 =int.Parse(Console.ReadLine());
+     Console.WriteLine("Digete el segundo numero que desea dividir");
+     num2= int.Parse(Console.ReadLine());
+     total = num1 / num2;
+     Console.WriteLine("El resultado de la division es" / total );
+   
+     Console.ReadK
+  }
+}
+
+2. Crear una clase donde tenga 2 metodo implementados: Cronometro, temporizador.
+
+
+
+Cronometro.
+
+
+class Main {
+  public static vois main](String[] args) {
+    int minutos = 0;
+    int segundos = 0;
+    for (minutos=0;minutos <60;minutos++)
+      {
+        for(segundos=0;minutos <60;segundos++)
+          {
+            system.out.println(minutos+":"+segundos)
+              delaySegundo();
+          }
+      }
+  }
+}
+private static void delaySegundo()
+  {
+  try{
+    Thread.sleep(1000);
+  }catch(InterruptedException e) {}
+  }
+
+
+
+Temporizador.
+
+
+ public class Stopwathc{
+  Timer timer;
+
+  public Stopwhatch(int seconds) {
+    timer = new Timer();
+    timer.shedule(new StopTask(), seconds * 1000;)
+  }
+  public static void  main(String[] args) {
+    new StopWatch(10);
+    Sustem.out.println("StopWatch Satarted.");
+  }
+  class StopTask exetends TimerTask {
+    public void run() {
+      System.out.println("Time up!")
+      timer.cancel();
+    }
+  }
+
+}
+
+
+
