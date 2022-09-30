@@ -33,21 +33,24 @@ public class  Operacion {
 
   }
 
-  public int dividir (int numero1, int numero2   ) {
-		if (numero1 >= 1 & numero2 >= 1 )-> int dividir se ejecuta
-		print(“dividir 6/3 ”);
-		return 2;
-
-
+  public int dividir (int dividir1, int dividir2 ) {
+	  
+		if (dividir1 >= 1 & dividir >= 1 ) 
+		
+		print(“dividir” / dividir1/dividir2 );
+		return dividir1/dividir2;
+		
+		if (numero1 <=0 & numero2 <=0) 
+			
+		print(“error”) 
+		
   }
 
 
 
   -------------------------------------------------------------------------------------------------------------------
 
-public class Reloj{
 
-	int
 
 
 
