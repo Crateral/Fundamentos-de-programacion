@@ -1,0 +1,43 @@
+1. Defina con sus propias palabras que es:
+	- Una clase
+	- Un atributo
+	- Un metodo
+
+Clase en Java: Es un molde que se usara para crear objetos. Esta clase contiene atributos y metodos que podran ser usados en los objetos y en otras clases si se heredan.
+Para nombrar una clase, esta debe inicar con mayuscula
+
+
+Atributo en Java: Son las variables que estan declaradas en la clase para ser utilizadas en los objetos. Los tipos de variables pueden ser de diferentes tipos como int, char, double, boolean entre otros.
+
+Metodo en Java: Un Metodo es una fragmento o una parte de codigo destinado para realizar funciones o tareas especificas como por ejemplo la Clase Operaciones puede tener un metodo que relice una suma.
+
+2. Nombre, explique y de un ejemplo de 3 tipos de herencia
+
+Ejemplo1: Dispositivos electronicos sera la clase padre que tendra clases hijas celulares, televisores, computadoras.
+
+La clase padre tiene caracteristicas que tendran las clases hijas como: nombre, serial, fecha de ingreso.
+
+Ejemplo2: Facultad de ingenieria sera la clase padre y las clases hijas sera Ingenieria de Sistemas, Ingenieria Civil, Ingenieria Ambiental.
+
+La clase padre tiene caracteristicas que tendran las clases hijas como: nombre, decano, registro, resolucion de alta calida.
+
+Ejemplo 3: Departamento de un pais sera la clase padre y las clase hija sera ciudad.
+
+La clase padre tiene caracteristicas que tendran las clases hijas como: nombre, poblacion, hubicacion.
+
+
+3. Cuales son los modificadores de acceso?
+Los modificadores de acceso  son palabras clave que van delante de un metodo, propiedad, clase  o variable donde restringe su acceso.
+
+Encontramos entre estos modificadores: 
+private: Privado y sera solo visible en la clase
+default: Visible desde el mismo paquete
+protected: Protegido Visible dentro del mismo paquete o sub clases en paquetes diferentes
+public: Publico visible desde cualquier lugar
+
+4. Cuales son los tipos de datos primitivos?
+Son el tipo de variables basicas usadas en Java como :
+int, short, long, double, float, boolean, byte y char
+
+5. Realizar la creacion de las siguientes clases:
+
