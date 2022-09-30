@@ -1,0 +1,320 @@
+Taller herencia:
+
+1. Realizar la implmentacion y separacion de figuras geometricas
+2. Realizar la implementacion de la estructura de un Vehiculos
+3. Realizar la estructura de una empresa de transporte de mercancia (personal, vehiculos, etc...)
+
+Se deben definir los atributos y metodos pertinentes, asi mismo crear la o las clases madres e hijas.
+---------------------------------------------------------------------------------------------------------------
+1. //Ejercicio uno//
+
+public class Geometricas {
+
+    private String nombre;
+    private Integer numeroVertices;
+
+    public Geometricas() {
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public Integer getNumeroVertices(int i) {
+        return numeroVertices;
+    }
+
+    public void setNumeroVertices(Integer numeroVertices) {
+        this.numeroVertices = numeroVertices;
+    }
+
+    @Override
+    public String toString() {
+        return "Geometricas{" +
+                "nombre='" + nombre + '\'' +
+                ", numeroVertices=" + numeroVertices +
+                '}';
+    }
+}
+------------------------------------------------------------------------------
+public class Triangulo extends Geometricas {
+}
+
+------------------------------------------------------------------------------
+
+public class Geometricas2 {
+    public static void main(String[] args) {
+
+        System.out.println("los datos son: " +datos());
+    }
+        public static Triangulo datos(){
+        Triangulo triangulo=new Triangulo();
+        triangulo.setNombre("Triangulo");
+        triangulo.setNumeroVertices(3);
+        return triangulo;
+
+    }
+}
+
+--------------------------------------------------------------------------------
+
+
+2. // Ejercicio dos //
+
+public abstract class Vehiculo {
+
+    private String marca;
+    private String modelo;
+    private String año;
+    private String color;
+    private Integer precio;
+
+
+    public Vehiculo() {
+    }
+
+    public String getMarca() {
+        return marca;
+    }
+
+    public void setMarca(String marca) {
+        this.marca = marca;
+    }
+
+    public String getModelo(String xr) {
+        return modelo;
+    }
+
+    public void setModelo(String modelo) {
+        this.modelo = modelo;
+    }
+
+    public String getAño() {
+        return año;
+    }
+
+    public void setAño(String año) {
+        this.año = año;
+    }
+
+    public String getColor(String azul) {
+        return color;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
+    }
+
+    public Integer getPrecio(int i) {
+        return precio;
+    }
+
+    public void setPrecio(Integer precio) {
+        this.precio = precio;
+    }
+
+    @Override
+    public String toString() {
+        return "Vehiculo{" +
+                "marca='" + marca + '\'' +
+                ", modelo='" + modelo + '\'' +
+                ", año='" + año + '\'' +
+                ", color='" + color + '\'' +
+                ", precio=" + precio +
+                '}';
+    }
+
+
+    public abstract void encender();
+}
+
+----------------------------------------------------------------------------
+
+public class Moto extends Vehiculo implements Funciones {
+
+    @Override
+    public void encender() {
+        System.out.println("La moto encendio");
+    }
+
+    @Override
+    public void apagar() {
+        System.out.println("La moto se apago");
+    }
+    @Override
+    public void mover(int distancia) {
+        System.out.println("La moto se movio "+distancia+" metros");
+    }
+
+}
+
+---------------------------------------------------------------------------------------
+
+
+public interface Funciones {
+
+    public void encender();
+    public void apagar();
+    public void mover(int distancia);
+
+
+}
+----------------------------------------------------------------------------------------
+
+public class Final {
+    public static void main(String[] args) {
+
+        System.out.println("Los datos del la moto son: "+datos());
+
+    }
+    public static Moto datos(){
+
+        Moto moto=new Moto();
+        moto.setMarca("Suzuki");
+        moto.setAño("2000");
+        moto.setColor("azul");
+        moto.setModelo("xr");
+        moto.setPrecio( 100000 );
+
+        moto.encender();
+        moto.mover(2);
+        moto.apagar();
+        return moto;
+
+    }
+
+}
+-------------------------------------------------------------------------------------------
+
+
+3. // Ejercicio tres //
+
+public class GestionHumana {
+
+    private String administracion;
+    private String recepcionista;
+    private String mensajero;
+
+    public GestionHumana() {
+    }
+
+    public String getAdministracion() {
+        return administracion;
+    }
+
+    public void setAdministracion(String administracion) {
+        this.administracion = administracion;
+    }
+
+    public String getRecepcionista() {
+        return recepcionista;
+    }
+
+    public void setRecepcionista(String recepcionista) {
+        this.recepcionista = recepcionista;
+    }
+
+    public String getMensajero() {
+        return mensajero;
+    }
+
+    public void setMensajero(String mensajero) {
+        this.mensajero = mensajero;
+    }
+
+    @Override
+    public String toString() {
+        return "GestionHumana{" +
+                "administracion='" + administracion + '\'' +
+                ", recepcionista='" + recepcionista + '\'' +
+                ", mensajero='" + mensajero + '\'' +
+                '}';
+    }
+}
+
+----------------------------------------------------------------------------------------
+
+public class DireccionOperativa {
+
+    private String trasportep;
+    private Integer numeroconductores;
+
+    public DireccionOperativa() {
+    }
+
+    public String getTrasportep() {
+        return trasportep;
+    }
+
+    public void setTrasportep(String trasportep) {
+        this.trasportep = trasportep;
+    }
+
+    public Integer getNumeroconductores() {
+        return numeroconductores;
+    }
+
+    public void setNumeroconductores(String numeroconductores) {
+        this.numeroconductores = Integer.valueOf(numeroconductores);
+    }
+
+    @Override
+    public String toString() {
+        return "DireccionOperativa{" +
+                "trasportep='" + trasportep + '\'' +
+                ", numeroconductores='" + numeroconductores + '\'' +
+                '}';
+    }
+}
+
+--------------------------------------------------------------------------------------
+
+
+public class Empleados extends GestionHumana {
+}
+
+---------------------------------------------------------------------------------------
+
+public class Empleados2 extends DireccionOperativa {
+}
+----------------------------------------------------------------------------
+
+public class Empresa {
+    public static void main(String[] args) {
+
+        System.out.println("los datos son: "+datos()+ "\n"+datos2()  );
+
+    }
+    public static Empleados datos(){
+
+       Empleados empleados=new Empleados();
+       empleados.setAdministracion("Carlos");
+       empleados.setRecepcionista("Marlon");
+       empleados.setMensajero("Julio");
+
+       return empleados;
+    }
+
+
+    public static Empleados2 datos2(){
+
+        Empleados2 empleados2=new Empleados2();
+        empleados2.setNumeroconductores("23");
+        empleados2.setTrasportep("12");
+
+
+        return empleados2;
+    }
+
+
+}
+-----------------------------------------------------------------------------
+
+
+
+
+
