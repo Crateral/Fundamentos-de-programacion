@@ -1,0 +1,285 @@
+Taller herencia:
+
+1. Realizar la implmentacion y separacion de figuras geometricas
+2. Realizar la implementacion de la estructura de un Vehiculos
+
+
+Automovil
+
+
+
+public class Automovil extends Vehiculo implements Funciones {
+
+    @Override
+    public void encender() {
+        System.out.println("El vehiculo encendio");
+    }
+    @Override
+    public void moverse() {
+        System.out.println("El vehiculo se mueve");
+    }
+    @Override
+    public void frenar() {
+        System.out.println("El vehiculo se detuvo");
+    }
+
+
+}
+
+
+Vehiculo
+
+
+public class Vehiculo {
+
+    private String marca;
+    private String modelo;
+    private String color;
+    private Integer precio;
+    private  Integer puertas;
+
+
+    public Vehiculo() {
+    }
+
+    public String getMarca() {
+        return marca;
+    }
+
+    public void setMarca(String marca) {
+        this.marca = marca;
+    }
+
+    public String getModelo() {
+        return modelo;
+    }
+
+    public void setModelo(String modelo) {
+        this.modelo = modelo;
+    }
+
+    public String getColor() {
+        return color;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
+    }
+
+    public Integer getPrecio() {
+        return precio;
+    }
+
+    public void setPrecio(Integer precio) {
+        this.precio = precio;
+    }
+
+    public Integer getPuertas() {
+        return puertas;
+    }
+
+    public void setPuertas(Integer puertas) {
+        this.puertas = puertas;
+    }
+
+    @Override
+    public String toString() {
+        return "Vehiculo{" +
+                "marca='" + marca + '\'' +
+                ", modelo='" + modelo + '\'' +
+                ", color='" + color + '\'' +
+                ", precio=" + precio +
+                ", puertas=" + puertas +
+                '}';
+    }
+}
+
+
+
+
+Funciones
+
+
+
+public interface Funciones {
+    public void encender();
+    public void moverse();
+    public void frenar();
+
+
+}
+
+
+Carro Final
+
+
+package taller3;
+
+public class CarroFinal {
+
+    public static void main(String[] args) {
+
+        System.out.println("los datos del vehico son: " + prueba() );
+    }
+    public static Automovil prueba(){
+
+        Automovil automovil= new Automovil();
+        automovil.setColor("gris");
+        automovil.setMarca("susuky");
+        automovil.setModelo("celerio");
+        automovil.setPrecio(50000);
+        automovil.setPuertas(4);
+        automovil.encender();
+        automovil.moverse();
+        automovil.frenar();
+        return automovil;
+    }
+}
+
+
+3. Realizar la estructura de una empresa de transporte de mercancia (personal, vehiculos, etc...)
+
+Se deben definir los atributos y metodos pertinentes, asi mismo crear la o las clases madres e hijas.
+
+Direccion operativa
+
+
+package ejercicio3;
+
+public class DireccionOperativa {
+
+    private String gerente;
+    private String secretaria;
+    private String asistente;
+
+    public String getGerente() {
+        return gerente;
+    }
+
+    public void setGerente(String gerente) {
+        this.gerente = gerente;
+    }
+
+    public String getSecretaria() {
+        return secretaria;
+    }
+
+    public void setSecretaria(String secretaria) {
+        this.secretaria = secretaria;
+    }
+
+    public String getAsistente() {
+        return asistente;
+    }
+
+    public void setAsistente(String asistente) {
+        this.asistente = asistente;
+    }
+
+    public DireccionOperativa() {
+
+    }
+
+    @Override
+    public String toString() {
+        return "DireccionOperativa{" +
+                "gerente='" + gerente + '\'' +
+                ", secretaria='" + secretaria + '\'' +
+                ", asistente='" + asistente + '\'' +
+                '}';
+    }
+}
+
+
+Empleados
+
+package ejercicio3;
+
+public class Empleados extends DireccionOperativa {
+}
+
+
+
+Empleados 2
+
+
+package ejercicio3;
+
+public class Empleados2 extends Conductores{
+}
+
+
+
+Conductores
+
+
+package ejercicio3;
+
+public class Conductores {
+    private String transportePasajeros;
+    private  Integer numeroConductores;
+
+    public Conductores() {
+
+    }
+
+    public String getTransportePasajeros() {
+        return transportePasajeros;
+    }
+
+    public void setTransportePasajeros(String transportePasajeros) {
+        this.transportePasajeros = transportePasajeros;
+    }
+
+    public Integer getNumeroConductores() {
+        return numeroConductores;
+    }
+
+    public void setNumeroConductores(Integer numeroConductores) {
+        this.numeroConductores = numeroConductores;
+    }
+
+    @Override
+    public String toString() {
+        return "Conductores{" +
+                "transportePasajeros='" + transportePasajeros + '\'' +
+                ", numeroConductores=" + numeroConductores +
+                '}';
+    }
+}
+
+
+Empresa
+
+package ejercicio3;
+
+public class Empresa {
+    public static void main(String[] args) {
+        System.out.println("datos empresa"+ prueba()+ "\n"+prueba2());
+
+    }
+    public static Empleados prueba(){
+
+        Empleados empleados= new Empleados();
+        empleados.setGerente("CARLOS GOMEZ");
+        empleados.setSecretaria("RODRIGO MOTA");
+        empleados.setAsistente("CAROLINA MARIN");
+        return empleados;
+
+
+
+        }
+    public static Empleados2 prueba2(){
+
+        Empleados2 empleados2= new Empleados2();
+        empleados2.setTransportePasajeros("Caramelo de limon");
+        empleados2.setNumeroConductores(5);
+
+        return empleados2;
+
+
+    }
+}
+
+
+
