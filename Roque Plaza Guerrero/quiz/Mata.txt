@@ -1,0 +1,23 @@
+public class Mata  extends Planta implements cicloVida{
+
+
+    public Mata(float altura, boolean daFruto, boolean tieneFlores) {
+        super(altura, daFruto, tieneFlores);
+    }
+
+    public void calcularAltura (){
+
+        System.out.println("la altura de la planta es:" );
+    }
+
+public void crearFlor(){
+
+        System.out.println( "la planta tiene flores:");
+
+}
+
+
+    public void crearFruto() {
+        System.out.println( "la planta tiene flores:");
+    }
+}

@@ -1,0 +1,30 @@
+public class Arbol  extends Planta implements cicloVida{
+
+
+    public Arbol(float altura, boolean daFruto, boolean tieneFlores) {
+        super(altura, daFruto, tieneFlores);
+    }
+
+    public void ver (){
+
+        System.out.println();
+    }
+
+    private void getdaFruto() {
+    }
+
+
+    public void calcularAltura() {
+
+    }
+
+
+    public void crearFlor() {
+
+    }
+
+
+    public void crearFruto() {
+
+    }
+}

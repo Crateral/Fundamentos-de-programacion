@@ -1,0 +1,26 @@
+public class Planta {
+
+
+private float altura;
+private boolean daFruto;
+private boolean tieneFlores;
+
+    public Planta(float altura, boolean daFruto, boolean tieneFlores) {
+        this.altura = altura;
+        this.daFruto = daFruto;
+        this.tieneFlores = tieneFlores;
+
+    }
+
+    public float getAltura() {
+        return altura;
+    }
+
+    public boolean isDaFruto() {
+        return daFruto;
+    }
+
+    public boolean isTieneFlores() {
+        return tieneFlores;
+    }
+}

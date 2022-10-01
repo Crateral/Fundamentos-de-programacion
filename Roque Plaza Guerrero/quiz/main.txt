@@ -1,0 +1,13 @@
+public class Main {
+    public static void main(String[] args) {
+
+        Arbol roble = new Arbol( 5, false,false);
+
+        Arbol manzano =new Arbol(5,true,true);
+        Hierba maleza = new Hierba(2, false, false);
+
+        Arbusto espino =new Arbusto(1,false,false);
+
+        System.out.println();
+    }
+}
