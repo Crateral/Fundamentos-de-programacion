@@ -1,0 +1,507 @@
+Taller herencia:
+
+1. Realizar la implementacion y separacion de figuras geometricas
+2. Realizar la implementacion de la estructura de un Vehiculos
+3. Realizar la estructura de una empresa de transporte de mercancia (personal, vehiculos, etc...)
+
+Se deben definir los atributos y metodos pertinentes, asi mismo crear la o las clases madres e hijas.
+
+Solucion
+
+1. Realizar la implmentacion y separacion de figuras geometricas
+
+<em>/*
+ * Interfaz FiguraGeometrica.
+ */
+ 
+package geometria;
+/**
+ */
+ 
+public interface FiguraGeometrica 
+{
+    void area();    
+}
+</em>
+
+-------------------------------------------------------
+
+<em>/*
+ * Clase Circulo.
+ */
+ 
+package geometria;
+/**
+ */
+ 
+public class Circulo extends FiguraGeometrica 
+{
+private double radio;
+private double areaRadio;
+static final double pi = 3.1415;
+ 
+public Circulo(double radio) 
+{
+this.radio = radio;
+}
+ 
+public double getRadio() 
+{
+return radio;
+}
+ 
+public void setRadio(double radio) 
+{
+this.radio = radio;
+}
+ 
+public double getAreaRadio() 
+{
+return areaRadio;
+}
+ 
+@Override
+public void area() 
+{
+areaRadio = pi * radio * radio;
+}    
+}</em>
+
+-------------------------------------------------------
+
+<em>/*
+ * Rectangulo
+ */
+package geometria;
+ 
+/**
+ */
+public class Rectangulo extends FiguraGeometrica
+{
+private double base;
+private double altura;
+private double areaRectangulo;
+ 
+public Rectangulo(double base, double altura) 
+{
+this.base = base;
+this.altura = altura;
+}
+ 
+public double getBase() 
+{
+return base;
+}
+ 
+public void setBase(double base)
+{
+this.base = base;
+}
+ 
+public double getAltura() 
+{
+return altura;
+}
+ 
+public void setAltura(double altura) 
+{
+this.altura = altura;
+}
+ 
+public double getAreaRectangulo() 
+{
+return areaRectangulo;
+}
+ 
+@Override
+public void area() 
+{
+areaRectangulo = base * altura;
+}
+}</em>
+
+-------------------------------------------------------
+<em>/*
+ * Triangulo
+ */
+package geometria;
+ 
+/**
+ */
+public class Triangulo extends FiguraGeometrica
+{
+private double base;
+private double altura;
+private double areaTriangulo;
+    
+ 
+public Triangulo(double base, double altura) 
+{
+this.base = base;
+this.altura = altura;
+}
+ 
+public double getBase() 
+{
+return base;
+}
+ 
+public void setBase(double base)
+{
+this.base = base;
+}
+ 
+public double getAltura() 
+{
+return altura;
+}
+ 
+public void setAltura(double altura) 
+{
+this.altura = altura;
+}
+
+public double getareaTriangulo() 
+{
+return areaTriangulo;
+}
+ 
+@Override
+public void area() 
+{
+areaTriangulo = base * altura / 2;
+}    
+    
+}</em>
+
+-------------------------------------------------------
+
+<em>/*
+ * Cuadrado
+ */
+package geometria;
+ 
+/**
+ */
+public class Cuadrado extends FiguraGeometrica
+{
+private double lado;
+private double areaCuadrado;
+
+public Cuadrado(double lado) 
+{
+this.lado = lado;
+}
+    
+public double getLado() 
+{
+return lado;
+}
+ 
+public void setLado(double lado) 
+{
+this.lado = lado;
+}
+ 
+public double getareaCuadrado() 
+{
+return areaCuadrado;
+}    
+   
+@Override
+public void area() 
+{
+areaCuadrado = lado * lado;
+}    
+}
+</em>
+
+-------------------------------------------------------
+
+<em>/*
+ * Geometría
+ */
+package geometria;
+ 
+/**
+ */
+public class Geometria 
+{
+/**
+* @param args the command line arguments
+*/
+public static void main(String[] args) 
+{
+//probar clases cálculo áreas figuras geométricas        
+Cuadrado cuadrado = new Cuadrado(10);
+cuadrado.area();
+System.out.println("Área del cuadrado de lado 10: " + 
+cuadrado.getareaCuadrado());
+        
+Circulo circulo = new Circulo(200);
+circulo.area();
+System.out.println("Área del círculo de radio 200: " + 
+circulo.getAreaRadio());
+        
+Rectangulo rectangulo = new Rectangulo(100, 20);
+rectangulo.area();
+System.out.println("Área del rectángulo de base 100 y altura 20: " + 
+rectangulo.getAreaRectangulo());
+ 
+Triangulo triangulo = new Triangulo(5, 10);
+triangulo.area();
+System.out.println("Área del triángulo de base 5 y altura 10: " + 
+triangulo.getareaTriangulo());        
+}    
+}</em>
+
+-------------------------------------------------------
+-------------------------------------------------------
+
+2. Realizar la implementacion de la estructura de un Vehiculos
+
+import java.util.Scaner;
+
+class Vehiculo{
+
+private Stringe placa, marca, modelo, color;
+private int año, kilometraje;
+
+Vehiculo( String placa, String marca, String modelo, String color,int año, int kilometraje){
+setPlaca(placa);
+setMarca(marca);
+setModelo(modelo);
+setColor(color);
+setAño(año);
+setKilometraje(kilometraje);
+}
+public void setPlaca(String p){ placa = p; }
+public void setMarca(String m){ maraca = m; }
+public void setModelo(String o){ modelo = o;}
+public void setColor(String c){ color = c;}
+public void setAño(int a){ año = a;}
+public void setKilometraje(int k){ kilometraje = k;}
+
+public void mostrarVehiculo(){
+System.out.println("\nPlaca: "+getPlaca()+"\nMarca: "+getMarca()+""\nModelo: "+getModelo()+
+"\nColor: "getColor()+"\nAño: "getAño()+""\nKilometraje: "getKilometraje() );
+}
+}
+public class MainVehiculo{
+
+static Scaner entrada = new Scaner(System.in);
+
+public static void main(String[] args){
+// Caracteristicas del Vehiculo
+String placa, marca, modelo, color;
+int año, kilometraje;
+System.out.println("Ingresar placa: ");
+placa = entrada.nextLine();
+System.out.println("Ingresar marca: ");
+marca = entrada.nextLine();
+System.out.println("Ingresar modelo: ");
+modelo = entrada.nextLine();
+System.out.println("Ingresar color: ");
+color = entrada.nextLine();
+System.out.println("Ingresar año: ");
+año = entrada.nextInt();
+System.out.println("Ingresar kilometraje: ");
+kilometraje = entrada.nextInt();
+Vehiculo e;
+e = new Vehiculo(placa, marca, modelo, color, año, kilometraje);
+e.mostrarVehiculo();
+}
+}
+
+-------------------------------------------------------
+-------------------------------------------------------
+
+3. Realizar la estructura de una empresa de transporte de mercancia (personal, vehiculos, etc...)
+
+package EmpresaDeTransporte;
+
+import java.util.Scanner;
+public class Main {
+
+public static void main(String[] args) {
+
+do
+{
+System.out.println("Personal");
+System.out.println("MedioDeTransporte");
+System.out.println("Envío");
+System.out.println("Salir."
+System.out.print("Ingrese la opción:");
+opcion = scanner.nextInt();
+
+switch (opcion) {
+
+option1:  
+
+scanner.nextLine();
+System.out.println("\nPersonal");
+System.out.println("Ingrese nombre: ");
+String nombre = scanner.nextLine();
+System.out.println("Ingrese apellido: ");
+String apellido = scanner.nextLine();
+System.out.println("Ingrese cedula: ");
+String cedula = scanner.nextLine();
+System.out.println("Ingrese telefono: ");
+String telefono = scanner.nextLine();
+System.out.println("Ingrese cargo: ");
+String cargo = scanner.nextLine();
+Personal personal = new Personal (nombre, apellido, cedula, telefono, cargo);
+System.out.println("personal.toString());
+break;
+
+option2:
+
+scanner.nextLine();
+System.out.println("\nMedioDeTransporte");
+Syste.out.println("Ingresar tipo de Transporte");
+String MedioDeTransporte = scanner.nextLine();
+Syste.out.println("Ingresar medio de Transporte");
+String medio de Transporte = scanner.nextLine();
+System.out.println("MedioDeTransporte());
+break;
+
+option3:
+
+scanner.nextLine();
+System.out.println("\nEnvíos");
+Syste.out.println("Fecha de ingreso);
+Date Fecha de ingreso = scanner.nextLine();
+Syste.out.println("Datos del producto");
+String Datos del producto = scanner.nextLine();
+Syste.out.println("Medio de envio");
+String Medio de envio = scanner.nextLine();
+Syste.out.println("Destino");
+String Destino = scanner.nextLine();
+System.out.println("Envíos"());
+
+option3:
+
+System.out.println("Salir\n");
+break;
+default:
+System.out.println("Error: " + opcion + " no es una opción válida.\n");
+}
+}
+while(opcion !=4);
+scanner.close();
+}
+}
+
+-------------------------------------------------------
+
+package EmpresaDeTransporte;
+
+public class Personal extends EmpresaDeTransporte{
+
+static Scanner entrada = new Scanner(System.in);
+
+public static void main(String[] args) {
+
+private (String Nombre,String apellido, Int cedula, Int telefono, String cargo);{
+setNombre(nombre);
+setApellido(apellido);
+setCedula(cedula);
+setTelefono(telefono);
+setCargo(cargo);
+}
+
+ @Override
+public String toString() {
+return "Personal{" +
+"nombre='" + nombre + '\'' +
+", apellido='" + apellido + '\'' +
+", cedula='" + cedula + '\'' +
+", telefono='" + telefono + '\'' +
+", cargo='" + cargo + '\'' +
+'}';
+}
+}
+
+-------------------------------------------------------
+
+package EmpresaDeTransporte;
+
+public class  MedioDeTransporte extends EmpresaDeTransporte{
+
+public class MainEmpresaDeTransporte{
+
+static Scanner entrada = new Scanner(System.in);
+
+public static void main(String[] args) {
+private String tipo, medio;
+
+EmpresaDeTransporte MedioDeTransporte[] = new EmpresaDeTransporte[2];
+
+while( c < 2 ) {
+Syste.out.println("Ingresar tipo de Transporte [Aereo, Terrestre, Acuatico]: ");
+tipo = entrada.next();
+Syste.out.println("Ingresar medio de Transporte [Metro, Bus, Avion, Barco]: ");
+medio = entyrda.next();
+
+}
+}
+MedioDeTransporte = new EmpresaDeTransporte(tipo,medio);
+MedioDeTransporte.mostrarEmpresaDeTransporte();
+}
+}
+}
+
+-------------------------------------------------------
+
+package EmpresaDeTransporte;
+
+public class  Envio extends EmpresaDeTransporte{
+
+public class MainEnvio{
+
+static Scanner entrada = new Scanner(System.in);
+
+public static void main(String[] args) {
+
+private Date Fecha de ingreso
+Private (String Datos del producto, Medio de envio, Destino);{
+Syste.out.println("Fecha de ingreso: ");
+setFechaDeIngreso(Fecha de ingreso);
+setMedioDeEnvio(Medio de envio);
+setDestino(Destino);
+}
+
+@Override
+public String toString() {
+return "Envio{" +
+"Fecha de ingreso='" + Fecha de ingreso + '\'' +
+", Datos del producto=" + Datos del producto + '\'' +
+", Medio de envio=" + Medio de envio + '\'' +
+", Destino=" + Destino + '\'' +
+'}';
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
