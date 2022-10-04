@@ -1,0 +1,13 @@
+Actividad  1, Semana 2:
+1. Crear un arreglo con los siguientes valores:
+	7, 4, 2, 1,10, 5, 6
+	1.1 Ordenar el arreglo de menor a mayor
+	1.2 Ordenar el arreglo de mayor a menor
+
+2. Crear un arreclo con los giuientes valores:
+	2,4,6,6,19,3,1,0,5,2,9
+	2.1 Eliminar los números duplicados
+	2.2 Ordenar el arreglo sin duplicador de menor a mayor
+	2.3 Ordenar el arreglo sin duplicados de mayor a menor
+
+3. Crear un triqui.	
