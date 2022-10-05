@@ -1,0 +1,79 @@
+Actividad  1, Semana 2:
+1. Crear un arreglo con los siguientes valores:
+	7, 4, 2, 1,10, 5, 6
+	1.1 Ordenar el arreglo de menor a mayor
+	1.2 Ordenar el arreglo de mayor a menor
+
+Solución : 
+
+public class Burbuja {
+
+    public static void main(String[] args) {
+
+        int[] arreglo;
+        arreglo = new int[]{7, 4, 2, 1, 10, 5, 6};
+        int auxiliar = 0;
+
+
+        for (int i = 0; i < arreglo.length; i++) {
+            for (int h = i + 1; h < arreglo.length; h++) {
+
+                if (arreglo[h] > arreglo[h - 1]) {
+                    auxiliar = arreglo[i];
+                    auxiliar = arreglo[h];
+                    arreglo[h] = auxiliar;
+
+                }
+            }
+
+
+        }
+        for (int i = 0; i < arreglo.length; i++) {
+            System.out.print(" " + arreglo[i]);
+
+
+        }
+
+
+        //orden
+
+        int aux;
+
+
+        for (int i = 0; i < arreglo.length - 1; i++) {
+            for (int Y = i + 1; Y < arreglo.length; Y++) {
+                if (arreglo[i] > arreglo[Y]) {
+                    aux = arreglo[i];
+                    arreglo[i] = arreglo[Y];
+                    arreglo[Y] = aux;
+
+                }
+
+            }
+
+        }
+        System.out.println(" ");
+        System.out.println(" Ordenados menor a mayor");
+        for (int Y = 0; Y < arreglo.length; Y++) {
+            System.out.print("  " + arreglo[Y]);
+
+        }
+
+        for (int i = 0; i < arreglo.length - 1; i++) {
+            for (int Y = i + 1; Y < arreglo.length; Y++) {
+                if (arreglo[i] < arreglo[Y]) {
+                    aux = arreglo[i];
+                    arreglo[i] = arreglo[Y];
+                    arreglo[Y] = aux;
+
+                }
+            }
+        }
+        System.out.println(" ");
+        System.out.println(" Ordenados  mayor a menor ");
+        for (int Y = 0; Y < arreglo.length; Y++) {
+            System.out.print("  " + arreglo[Y]);
+
+        }
+    }
+}

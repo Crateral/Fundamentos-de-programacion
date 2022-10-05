@@ -1,0 +1,156 @@
+Actividad  1, Semana 2:
+1. Crear un arreglo con los siguientes valores:
+	7, 4, 2, 1,10, 5, 6
+	1.1 Ordenar el arreglo de menor a mayor
+	1.2 Ordenar el arreglo de mayor a menor
+
+2. Crear un arreclo con los giuientes valores:
+	2,4,6,6,19,3,1,0,5,2,9
+	2.1 Eliminar los números duplicados
+	2.2 Ordenar el arreglo sin duplicador de menor a mayor
+	2.3 Ordenar el arreglo sin duplicados de mayor a menor
+
+3. Crear un triqui.	
+
+
+
+
+
+
+punto #1
+
+
+package arreglo;
+
+
+public class Arreglo {
+
+    public static void main(String[] args) {
+        
+    
+      int[] Numeros = {7,4,2,1,10,5,6}; 
+        int Temporal = 0;
+        for(int i = Numeros.length - 1; i > 0;i--){
+        for(int j = 0; j < i; j++){
+        if(Numeros[j]>Numeros[j+1]){
+        Temporal = Numeros[j];
+        Numeros[j] = Numeros[j + 1];
+        Numeros[j + 1] = Temporal;
+        
+        }
+         }
+        }
+        
+        for(int i=0;i<Numeros.length;i++){
+        System.out.println(Numeros[i]);
+        }
+        
+        
+        for(int i = Numeros.length - 1; i > 0;i--){
+        for(int j = 0; j < i; j++){
+        if(Numeros[j]<Numeros[j+1]){
+        Temporal = Numeros[j];
+        Numeros[j] = Numeros[j + 1];
+        Numeros[j + 1] = Temporal;
+        
+        }
+         }
+        }
+        for(int i=0;i<Numeros.length;i++){
+        System.out.println(Numeros[i]);
+        }
+
+        
+        
+    }
+}    
+
+
+
+
+EJERCICIO #2
+
+
+public class Arreglo {
+
+    public static void main(String[] args) {
+        
+    
+     int [] Numeros = {2,4,6,6,19,3,1,0,5,2,9}; 
+     int [] B = new int [Numeros.length];
+     
+     int J,top = 0;
+     boolean Duplicados;
+     for(int i=0;i<Numeros.length;i++){
+         Duplicados = false;
+         J=0;
+         while(!Duplicados &&(J<top)){
+             if(Numeros[i] == B[J]){
+             Duplicados = true;
+             }
+          J++;
+         }
+         
+         if(!Duplicados){
+         B[top] = Numeros[i];
+         top++;
+         }
+         
+     }
+     for(int i = 0;i<top;i++){
+     System.out.println(B[i]+"");   
+             } 
+     
+      int Temporal = 0;
+        for(int i = Numeros.length - 1; i > 0;i--){
+        for(int j = 0; j < i; j++){
+        if(Numeros[j]>Numeros[j+1]){
+        Temporal = Numeros[j];
+        Numeros[j] = Numeros[j + 1];
+        Numeros[j + 1] = Temporal;
+        
+        }
+         }
+        }
+         
+        for(int i=0;i<Numeros.length;i++){
+        System.out.println(Numeros[i]);
+     
+        }
+     
+     
+     
+    }
+}    
+        
+
+EJERCICIO #3
+
+public class Triqui {
+    
+    public static void main(String args[]){
+        
+        //Creacion de un arreglo de dos dimensiones
+        String [][]arrayTabla = new String[3][3];
+        
+        //Llenando el arreglo
+        for(int renglon = 0; renglon < 3; renglon++){
+            for(int columna = 0; columna < 3; columna++){
+                arrayTabla[renglon][columna] = "X ";
+            }    
+        }
+        
+        //Imprimiendo los valores del arreglo
+        for(int renglon = 0; renglon < 3; renglon++){
+            for(int columna = 0; columna < 3; columna++){
+                System.out.print(arrayTabla[renglon][columna]);
+            }    
+            System.out.println();
+        }
+    }
+}
+
+
+
+
+
