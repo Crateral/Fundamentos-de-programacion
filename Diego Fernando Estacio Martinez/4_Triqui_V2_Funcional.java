@@ -110,7 +110,7 @@ public class Triqui {
                 || matriz[0][2] + matriz[1][2] + matriz[2][2] == 3
                 || matriz[0][0] + matriz[1][1] + matriz[2][2] == 3
                 || matriz[2][0] + matriz[1][1] + matriz[1][2] == 3) {
-            System.out.println("Ganador O");
+            System.out.println("Ganador X");
             bloquear();
         }
         
