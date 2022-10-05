@@ -1,0 +1,80 @@
+package OperacionesMath;
+
+/*
+ *
+ * @author Juan David  Henao
+ */
+
+/* Actividad 2:
+
+1. Crear las siguiente Clase: Operaciones
+	1.1 Crear los siguientes metodos:
+		Suma, resta, multiplicacion y division (no sebe ser posible dividir por 0)
+	1.2 Realizar la implementacion de los metodos, es decir, debo poder sumar restar multiplicar y dividir */
+
+import javax.swing.*;
+
+public class Operaciones{
+    int n1, n2, suma, resta, multip, divi;
+
+    public void digitarNumeros(){
+
+        n1= Integer.parseInt(JOptionPane.showInputDialog("Digite primer número : " ));
+        n2= Integer.parseInt(JOptionPane.showInputDialog("Digite segundo número : " ));
+    }
+
+    public void sumar(){
+        suma= n1+n2;
+
+    }
+    public void restar (){
+        resta= n1-n2;
+
+    }
+    public void multiplicar(){
+        multip= n1*n2;
+
+    }
+
+    public void dividir(){
+
+        if (n2==0){
+            System.out.println ("NO SE PUEDE DIVIDIR ENTRE CERO " );
+
+        }else{
+            divi=n1/n2;
+            System.out.println("La división de los números es : " + divi);
+        }
+    }
+    public void mostrarResultados(){
+
+        System.out.println("la suma de los números es : " + suma);
+        System.out.println("la resta de los numeros es : " + resta);
+        System.out.println("la multiplicacion de los números es : " + multip);
+        System.out.println("los números operados son : " + n1 + " y "+ n2);
+
+    }
+}
+
+
+
+package OperacionesMath;
+
+/*
+ * @author Juan David Henao
+ */
+public class Main {
+
+    public static void main(String[] args){
+
+        Operaciones op  = new Operaciones();
+
+        op.digitarNumeros();
+        op.sumar();
+        op.restar();
+        op.multiplicar();
+        op.dividir();
+        op.mostrarResultados();
+
+    }
+}
