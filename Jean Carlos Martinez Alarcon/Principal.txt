@@ -1,0 +1,123 @@
+package informe;
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+
+public class Principal {
+    
+        
+      
+                        
+        public static void main(String[] args) {
+            
+            int opcion;
+            
+            ArrayList<Informe> informes = new ArrayList<>();   
+                        Scanner scanner = new Scanner (System.in);
+                        
+             
+                System.out.println("Digita la opciòn");
+                System.out.println("1Op Elegir informe");
+                System.out.println("2Op Añadir 5 Informes adicionales");
+                opcion = scanner.nextInt();
+                       
+                
+              
+                System.out.print("Primeros 10 Informes");
+                                        
+               Informe informes1=new Informe();
+               informes1.setCodigo(1);
+               informes1.setTarea("Administrativo");
+               
+               Informe informes2=new Informe();
+               informes2.setCodigo(2);
+               informes2.setTarea("Empresarial");
+               
+               Informe informes3=new Informe();
+               informes3.setCodigo(3);
+               informes3.setTarea("Personal");
+               
+               Informe informes4=new Informe();
+               informes4.setCodigo(1);
+               informes4.setTarea("Administrativo");
+               
+               Informe informes5=new Informe();
+               informes5.setCodigo(2);
+               informes5.setTarea("Empresarial");
+               
+               Informe informes6=new Informe();
+               informes6.setCodigo(3);
+               informes6.setTarea("Personal");
+               
+               Informe informes7=new Informe();
+               informes7.setCodigo(1);
+               informes7.setTarea("Administrativo");
+               
+               Informe informes8=new Informe();
+               informes8.setCodigo(2);
+               informes8.setTarea("Empresarial");
+               
+               Informe informes9=new Informe();
+               informes9.setCodigo(3);
+               informes9.setTarea("Personal");
+               
+               Informe informes10=new Informe();
+               informes10.setCodigo(1);
+               informes10.setTarea("Administrativo");
+               
+                         
+               
+               Informe.add(informes1);
+               Informe.add(informes2);
+               Informe.add(informes3);
+               Informe.add(informes4);
+               Informe.add(informes5);
+               Informe.add(informes6);
+               Informe.add(informes7);
+               Informe.add(informes8);
+               Informe.add(informes9);
+               Informe.add(informes10);
+                
+              
+               for (Informe i: informes){
+                   System.out.println(i.toString());
+                   
+             }
+               System.out.println("Ingrese 5 informes adicionales");
+                    
+                    
+               Informe informes11=new Informe();
+               informes11.setCodigo(1);
+               informes11.setTarea("Personal");
+               
+               Informe informes12=new Informe();
+               informes12.setCodigo(2);
+               informes12.setTarea("Administrativo");
+               
+               Informe informes13=new Informe();
+               informes13.setCodigo(3);
+               informes13.setTarea("Empresarial");
+               
+               Informe informes14=new Informe();
+               informes14.setCodigo(4);
+               informes14.setTarea("Personal");
+               
+               Informe informes15=new Informe();
+               informes15.setCodigo(5);
+               informes15.setTarea("Administrativo");
+               
+               
+               Informe.add(informes11);
+               Informe.add(informes12);
+               Informe.add(informes13);
+               Informe.add(informes14);
+               Informe.add(informes15);
+                    
+                                  
+                    Informe.forEach((informe)->{
+                        System.out.println(informe.toString());
+                    });
+     }        
+        
+}      
