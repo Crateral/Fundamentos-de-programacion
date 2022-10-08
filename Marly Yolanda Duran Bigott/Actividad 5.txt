@@ -1,0 +1,110 @@
+Un amigo funcionario nos pide que le hagamos un informe para sus informes. Debemos gestionar informes que están formados de un código numérico y una tarea que pueden ser ADMINISTRATIVO, EMPRESARIAL y PERSONAL. Debe comprobarse que la tarea es alguna de estas.
+Nuestro amigo quiere que seamos capaz de agregar y eliminar informes en forma de pila (el último en entrar, es el primero en salir). Agrega 10 informes y muestra su contenido, elimina todo el contenido y agrega de nuevo 5 informes.
+Punto extra Actividad5:
+- Poder consultar los informes añadidos a una tarea en especifica, es decir:
+Si ingreso 5 informes administrativos, 3 empresariales y 2 personales, poder solo consultar los 5 informes administrativos
+package informe;
+
+public class Informe {
+    public final String[] tarea={"administrativo","empresarial","personal"};
+    private int codigo;
+    private int Tarea;
+
+    public Informe(int codigo,int tarea){
+        final int i = this.codigo = codigo;
+        this.tarea = this.tarea[Tarea];
+
+    }
+    public Informe(int tarea){
+
+        this.tarea  = tarea;
+    }
+    public int int getCodigo(){
+        return codigo;
+
+    }
+    public void setCodigo(int codigo){
+        this.codigo = codigo;
+
+    }
+    public String getTarea(){
+        return tarea = tarea;
+
+    }
+    public void setTarea(String tarea){
+        this.tarea = tarea;
+
+    }
+
+    @Override
+    public String toString(){
+        return " - El informe con "+codigo+"; tiene la tarea de" tarea;
+    }
+}
+___________________________________________________________________________________
+import informe.Informe;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Random;
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        System.out.println("Informe!");
+        Scanner x = new Scanner(System.in);
+        int contAdministrativo=0, contEmpresarial=0, contPersonal=0;
+        List<Informe> informes = new ArrayList<>();
+
+
+        while (true){
+
+            System.out.println("");
+            System.out.println("Que hacer hoy");
+            System.out.println("Agregar informe 1 ");
+            System.out.println("Eliminar informe 2");
+            System.out.println("Consulta informe 3");
+            System.out.println("Que tipo de informe requerido 4");
+            System.out.println("Consulta informe por tarea 5");
+            System.out.println("Consulta informe por codigo 6");
+            System.out.println("");
+
+            int opcion = x.nextInt();
+            switch ( opcion){
+                case 1
+                    System.out.println("Cuantos informes desea ingresar");
+                    int numeroInforme= x.nextInt();
+                    System.out.println("Agregando informes  ");
+                    Random random = new Random();
+                    for (int i=0; i<numeroInforme; i++){
+                        Informe informeLlena = new Informe();
+                        //System.out.println("ingresa el codigo del imforme");
+                        int codigoInforme= random.nextInt(300-1+1)+1;
+                        informeLlena.setCodigo(codigoInforme);
+                        //System.out.println("Elige la tares 1. Administrativo. 2. Empresarial 3. Personal");
+                        int tareaInforme=random.nextInt(3-1+1)+1;
+                        informeLlena.setTarea(informeLlena.tarea[tareaInforme-1]);
+                        if (tareaInforme==1){
+
+                        }
+                            contAdministrativo=contAdministrativo+1;
+                            else  if (tareaInforme==2){
+                                contEmpresarial+1;
+                            else if (tareaInforme==3){
+                                contPersonal=contPersonal+1;
+
+                            }
+                            informe.add(informeLlena);
+
+                        }
+                            break;
+                        case2:
+                        informes.clear();
+                        System.out.println("-Informe eliminado");
+
+                    }
+
+        }
+        }
+        }
