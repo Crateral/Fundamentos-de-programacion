@@ -1,0 +1,47 @@
+package CronoYtempo;
+
+// @Autor Juan David Henao 
+// 2. Crear una clase donde tenga 2 metodos implementados: Cronometro, temporizador.
+
+import javax.swing.*;
+
+
+public class Crono {
+        int min=0, seg=0;
+
+        public void DigitarTiempo(){
+
+            int min= Integer.parseInt(JOptionPane.showInputDialog("CRONO-TEMPORIZADOR Digite Tiempo en minutos : " ));
+            int seg = 1;
+
+            int tiempo= min * seg;
+             for (min=0; min < tiempo; min ++){
+
+                for(seg=0; seg < 60; seg ++){
+
+                    System.out.println(min + " : " + seg );
+                    delaySegundo();
+                }}
+
+        }
+
+        private static void delaySegundo() {
+
+            try {
+                Thread.sleep(1000);
+            }catch(InterruptedException e){}
+        }
+    }
+
+
+package CronoYtempo;
+
+
+
+public class Main {
+    public static void main(String[] args) {
+
+    Crono c = new Crono();
+    c.DigitarTiempo();
+    }
+}

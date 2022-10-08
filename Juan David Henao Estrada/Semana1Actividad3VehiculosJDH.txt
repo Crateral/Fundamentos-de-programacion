@@ -1,0 +1,105 @@
+Taller herencia:
+
+// 2. Realizar la implementacion de la estructura de un Vehiculos
+
+
+import javax.swing.*;
+
+public class Vehiculo {
+
+    private String marca, modelo, color, placa;
+
+    public Vehiculo() {
+
+    }
+
+    public String getMarca() {
+        return marca;
+    }
+
+    public void setMarca(String marca) {
+        this.marca = marca;
+        //System.out.println("Marca: " + getMarca());
+    }
+
+    public String getModelo() {
+        return modelo;
+
+    }
+
+    public void setModelo(String modelo) {
+        this.modelo = modelo;
+        //System.out.println("Modelo: " + getModelo());
+
+    }
+
+--------------------------------------------------------------------------------------------------------
+
+import javax.swing.*;
+
+public class Acciones extends Vehiculo{
+
+private String prender, acelerar, parar;
+
+    public Acciones() {
+    }
+
+    public String getPrender() {
+        return prender;
+    }
+
+    public void setPrender(String prender) {
+        this.prender = prender;
+
+    }
+
+    public String getAcelerar() {
+        return acelerar;
+    }
+
+    public void setAcelerar(String acelerar) {
+        this.acelerar = acelerar;
+        System.out.println(getAcelerar());
+
+    }
+
+    public String getParar() {
+        return parar;
+    }
+
+    public void setParar(String parar) {
+        this.parar = parar;
+        System.out.println(getParar());
+
+    }
+    }
+
+------------------------------------------------------------------------------
+
+import javax.swing.*;
+
+public class Main {
+    public static void main(String[] args) {
+        Acciones a = new Acciones();
+        a.setPrender("Encendido");
+
+        Vehiculo auto= new Vehiculo();
+
+        auto.setPlaca (JOptionPane.showInputDialog("Digite placas del vehículo: "));
+        auto.setMarca (JOptionPane.showInputDialog("Digite marca : "));
+        auto.setColor (JOptionPane.showInputDialog("Digite color : "));
+        auto.setModelo (JOptionPane.showInputDialog("Digite modelo : "));
+
+
+
+        System.out.println(" El Vehiculo marca: " + auto.getMarca() +
+                "\n de modelo: " + auto.getModelo() + "\n Y color : " + auto.getColor() +
+                "\n Está en un estado: " + a.getPrender());
+
+
+
+    }
+
+}
+
+
