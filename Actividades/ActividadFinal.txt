@@ -1,0 +1,3 @@
+Para el proyecyo final se debe crear la estructura de un ecommerse utilizando lo visto hasta la fecha y empleando las buenas practicas de programacion:
+
+1. Se debe crear el login: Registrar usuario, hacer login, logut, cambiar contraseña, recuperar contraseña.
