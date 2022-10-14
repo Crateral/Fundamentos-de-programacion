@@ -1,0 +1,149 @@
+
+Camilo Gomez
+
+
+
+
+public class Usuarios {
+
+    
+   
+     
+    private String usuario;
+    private String contrasena;
+    private String nombres;
+    private String apellidos;
+    private String correo;
+
+    public Usuarios(String usuario, String contrasena, String nombres, String apellidos, String correo) {
+        this.usuario = usuario;
+        this.contrasena = contrasena;
+        this.nombres = nombres;
+        this.apellidos = apellidos;
+        this.correo = correo;
+    }
+
+
+    public String getUsuario() {
+        return usuario;
+    }
+
+    public void setUsuario(String usuario) {
+        this.usuario = usuario;
+    }
+
+    public String getContrasena() {
+        return contrasena;
+    }
+
+    public void setContrasenia(String contrasenia) {
+        this.contrasena = contrasenia;
+    }
+
+    public String getNombres() {
+        return nombres;
+    }
+
+    public void setNombres(String nombres) {
+        this.nombres = nombres;
+    }
+
+    public String getApellidos() {
+        return apellidos;
+    }
+
+    public void setApellidos(String apellidos) {
+        this.apellidos = apellidos;
+    }
+
+    public String getCorreo() {
+        return correo;
+    }
+
+    public void setCorreo(String correo) {
+        this.correo = correo;
+    }
+    
+    
+    
+}
+
+
+
+
+
+
+
+
+
+
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.util.ArrayList;
+
+
+public class ListaUsuario {
+   public static void main(String[] args) throws Exception { 
+   BufferedReader bf =new BufferedReader(new InputStreamReader(System.in)); 
+    ArrayList<Usuarios> usuarios = new ArrayList<>();
+
+       String contr = null;
+       int Limite=0;
+       while(Limite ==0){
+       
+       System.out.println("MENU DE USUARIO");
+       System.out.println("1-Registrar Usuario");
+       System.out.println("2-iniciar Sesion ");
+       System.out.println("3-Cambiar Contraseña");
+       System.out.println("4-Cerrar Sesion");
+       
+      int op = Integer.parseInt(bf.readLine());
+       switch(op){
+        
+           case 1:
+               System.out.println("Ingrese el usuario");
+               String usuario = bf.readLine();
+               System.out.println("Ingrese la Contraseña");
+               String contrasena = bf.readLine();
+               System.out.println("Ingrese los Nombres");
+               String nombres = bf.readLine();
+               System.out.println("Ingrese los Apellidos");
+               String apellidos = bf.readLine();
+               System.out.println("Ingrese el Correo");
+               String correo = bf.readLine();
+               Usuarios u1 = new Usuarios (usuario,contrasena,nombres,apellidos,correo);
+               System.out.println("REGISTRO EXITOSO");
+               usuarios.add(u1);
+           break;
+           case 2:
+                   System.out.println("Ingrese el usuario");
+                   String u1suario = bf.readLine();
+                   System.out.println("Ingrese la Contraseña");
+                   String contrasena1 = bf.readLine();
+                   System.out.println("iniciando seccion");    
+           break;
+           
+           case 3:
+                 for(int i=0;i<usuarios.size();i++){
+                   System.out.println("contraseña:"+usuarios.get(i).getContrasena());
+                   System.out.println("desea cambiar la contrseña"+
+                           "\nSI"+
+                             "\nNO");
+                   String cambiar = bf.readLine();
+                    System.out.println("Contraeña nueva");
+                    String nueva = bf.readLine();
+                   System.out.println("Contraseña cambiada"); 
+               }
+           break;
+           
+           case 4:
+              System.out.println("la sesion se cerro" ); 
+              Limite=1;
+           break;
+           default:
+            System.out.println("opcion no valida");   
+       
+         }       
+       }   
+   }                 
+ }
