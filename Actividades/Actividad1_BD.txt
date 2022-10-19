@@ -1,0 +1,10 @@
+Creat una base de datos para un colegio.
+
+Crear la tabla de estudiantes
+Crear la tabla de profesores
+Crear la tabla de notas
+Crear la tabla de clases
+
+Colocar al menos 2 registros en cada tabla.
+
+Todo se debe realizar por medio de codigo (scripts)
