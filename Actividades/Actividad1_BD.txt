@@ -8,3 +8,7 @@ Crear la tabla de clases
 Colocar al menos 2 registros en cada tabla.
 
 Todo se debe realizar por medio de codigo (scripts)
+
+Colar en 3ra forma normal cada tabla
+
+Entregar scripts e imagen de diagrama relacional
