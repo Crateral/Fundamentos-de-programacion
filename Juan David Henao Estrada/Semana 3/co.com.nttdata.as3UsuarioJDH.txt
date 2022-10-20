@@ -1,0 +1,190 @@
+package usuario;
+
+import java.io.Serializable;
+
+public class Usuario implements Serializable {
+
+    private String nombre;
+    private String documento;
+    private String correo;
+    private String usuario;
+    private String clave;
+
+    public Usuario() {
+
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public String getDocumento() {
+        return documento;
+    }
+
+    public void setDocumento(String documento) {
+        this.documento = documento;
+    }
+
+    public String getCorreo() {
+        return correo;
+    }
+
+    public void setCorreo(String correo) {
+        this.correo = correo;
+    }
+
+    public String getUsuario() {
+        return usuario;
+    }
+
+    public void setUsuario(String usuario) {
+        this.usuario = usuario;
+    }
+
+    public String getClave() {
+        return clave;
+    }
+
+    public void setClave(String clave) {
+        this.clave = clave;
+    }
+
+    @Override
+    public String toString() {
+        return "\nUsuario " +
+                "\nnombre= " + nombre +
+                "\ndocumento= " + documento +
+                "\ncorreo= " + correo +
+                "\nusuario= " + usuario +
+                "\nclave= " + clave ;
+    }
+}
+
+--------------------------------------------------
+
+
+package usuario;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+
+    public class Main{
+        public static void main(String[] args) {
+
+            List<Usuario> regUsers= new ArrayList<>();
+
+            Scanner teclado = new Scanner(System.in);
+            String nombre, documento, correo, usuario, clave;
+            int opcion=0;
+
+            while (true){
+                System.out.println("-----------------------------");
+                System.out.println("  ♻ Registro de Usuario ♻  ");
+                System.out.println("_____________________________");
+                System.out.println("   1. Crear Usuario          ");
+                System.out.println("   2. Consultar Usuario      ");
+                System.out.println("   3. Cambiar Contraseña     ");
+                System.out.println("   4. Salir                  ");
+
+
+                System.out.print("Digite la opcion de usuario que requiera: ");
+                opcion= teclado.nextInt();
+
+                switch (opcion){
+                    case 1:
+
+                        Usuario u = new Usuario();
+                        System.out.println(" Digite datos del usuario ");
+                        System.out.print(" Nombre: ");
+                        nombre = teclado.next();
+                        u.setNombre(nombre);
+
+                        System.out.print(" Documento: ");
+                        documento = teclado.next();
+                        u.setDocumento(documento);
+
+                        System.out.print(" Correo: ");
+                        correo = teclado.next();
+                        u.setCorreo(correo);
+
+                        System.out.print(" Usuario: ");
+                        usuario = teclado.next();
+                        u.setUsuario(usuario);
+
+                        System.out.print(" Clave: ");
+                        clave = teclado.next();
+                        u.setClave(clave);
+
+
+                        regUsers.add(u);
+                        System.out.println("Usuario ha sido registrado ");
+
+
+                        break;
+
+                    case 2:
+                        if (regUsers.size()!=0) {
+                            for (Usuario regu : regUsers) {
+                                System.out.println(regu.toString());
+                            }
+                        } else {
+                            System.out.println("No hay usuarios registrados ");
+                        }
+
+                        break;
+
+                    case 3:
+                        if (regUsers.size()!=0) {
+
+                            System.out.print("Digite correo: ");
+                            correo = teclado.next();
+
+                            for (Usuario cont : regUsers) {
+                                if (cont.getCorreo().equals(correo)) {
+                                    int indice = regUsers.indexOf(cont.getCorreo());
+
+                                    if (indice != 0) {
+                                        System.out.print("ingresar nueva clave: ");
+                                        clave = teclado.next();
+
+                                        int cambioClave = teclado.nextInt();
+                                        if (cambioClave == 1) {
+                                            cont.setClave(clave);
+                                            System.out.println("Clave cambiada ");
+                                        }else {
+                                            System.out.println("Cambio de clave cancelada ");
+                                        }
+
+                                    }
+                                }
+
+                            }
+                        }else {
+                            System.out.println("No hay usuarios registrados ");
+                        }
+
+                        break;
+
+                    case 4:
+
+                        System.out.println(" Sesion finalizada ");
+                        System.exit(0);
+
+                    default:
+                        System.out.println(" Opcion  INVALIDA ");
+
+                }
+
+
+            }
+
+        }
+    }
+
