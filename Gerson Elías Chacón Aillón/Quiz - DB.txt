@@ -1,0 +1,93 @@
+1. Que es y cuales son las sentencias DML
+
+	Lenguaje de manipulación de datos (DML) : Se utilizan para manipular los registros de nuestra tabla y son : SELECT, INSERT,
+	UPDATE, DELETE.
+
+
+2. Que es y cuales son las sentencias DDL
+
+	Lenguaje de definición de datos (DDL) : Se utilizan para diseñar y definir la estructura de nuestra base de datos y son : CREATE,
+	ALTER, DROP.
+
+
+3. Describa las 3 primeras formas normales
+
+	1. Poner llave primaria - no repetir datos similares
+	2. Estar en primera forma normal - separar datos duplicados en otra tabla
+	3. Estar en segunda forma normal - extraer o eliminar campos que no depende de la clave
+
+
+
+4. Recree un ejemplo de normalizacion y ejemplifique las fases (No se pueden usar ejemplos vistos en clase)
+
+
+
+	Sin normalizar
+	----------------------------------------------------------------------------------------------------
+	EAN		PRODUCTO		UNIDAD		UBICACIÓN1	UBICACIÓN2	UBICACIÓN3
+	----------------------------------------------------------------------------------------------------
+	7708529		DOLEX TAB		ETICO		C28		T02		E36
+	7736981		CAPTOPRIL TAB		GENERICO	C05		T15		E18
+
+
+
+
+	Primeria forma normal
+	-------------------------------------------------------------------
+	EAN		PRODUCTO		UNIDAD		UBICACIÓN
+	-------------------------------------------------------------------
+	7708529		DOLEX TAB		ETICO		C28
+	7708529		DOLEX TAB		ETICO		T02
+	7708529		DOLEX TAB		ETICO		E36
+	7736981		CAPTOPRIL TAB		GENERICO	C05
+	7736981		CAPTOPRIL TAB		GENERICO	T15
+	7736981		CAPTORPIL TAB		GENERICO	E18
+
+
+
+
+	Segunda forma normal
+	-------------------------------------------------
+	EAN		PRODUCTO		UNIDAD
+	-------------------------------------------------
+	7708529		DOLEX TAB		ETICO
+	7736981		CAPTORPIL TAB		GENERICO
+
+
+	----------------------------
+	EAN		UBICACIÓN
+	----------------------------
+	7708529		C28
+	7708529		T02
+	7708529		E36
+	7736981		C05
+	7736981		T15
+	7736981		E18
+
+
+
+
+	Tercera forma normal
+	---------------------------------
+	EAN		PRODUCTO
+	---------------------------------
+	7708529		DOLEX TAB
+	7736981		CAPTORPIL TAB
+
+
+	----------------------------------
+	NOMBRE			UNIDAD
+	----------------------------------
+	DOLEX TAB		ETICO
+	CAPTOPRIL TAB		GENERICO
+
+
+	-------------------------------
+	EAN		UBICACIÓN
+	-------------------------------
+	7708529		C28
+	7708529		T02
+	7708529		E36
+	7736981		C05
+	7736981		T15
+	7736981		E18	
