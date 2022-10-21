@@ -1,0 +1,60 @@
+create database colegio;
+ use colegio;
+ 
+ create table estudiante(
+ idEstudiante int auto_increment not null,
+ numeroDocumento int (15) not null,
+ nombres varchar(30) not null,
+ apellidos varchar(30) not null,
+ curso varchar (20),
+  primary key (numeroDocumento)
+  );
+  
+insert into estudiante values (1,1192812463,'Camilo Andres','Gomez Alturo', 'Octavo Segundaria' );
+insert into estudiante values (2,1234567891,'Juan', 'Perez Fonseca', 'Noveno segundaria');
+  
+ select * from estudiante;
+ 
+ 
+ create table profesores(
+ idProfesor int auto_increment not null,
+ nombres varchar (30) not null,
+ apellidos varchar (30) not null,
+ especialidad varchar (30),
+ primary key (numDocumentoPro)
+ );
+ 
+ insert into profesores values(123,'Aida', 'Nuñez Gonzales', 'licenciada Matematicas');
+ insert into profesores values(456, 'Jhony', 'Arguellez  Trujillo', 'licenciado Sociales');
+ 
+ select * from profesores;
+ 
+ 
+ create table notas(
+ idNotas int auto_increment not null,
+ notaTalleres float (5),
+ notaParciales float (5),
+ notaFinal float (5),
+ idEstudiantes int,
+ primary key (idNotas)
+ );
+ 
+ insert into notas values ( 1, 3.5, 3.0, 3.0);
+ insert into notas values ( 2, 4.0, 3.0, 3.5);
+ 
+ select * from notas;
+ 
+ create table clases(
+ idClases int auto_increment not null,
+ nombre varchar (20),
+ horario varchar (40),
+ hora varchar (10),
+ curso varchar(20),
+ primary key (idClases)
+ );
+ 
+ insert into clases values (1,'Matematicas', 'lunes y miercoles','2pm', ' Noveno');
+ insert into clases values (2,'Sociales', 'Martes y Jueves','3pm', 'Ocatvo' );
+ 
+ select * from clases;
+ 

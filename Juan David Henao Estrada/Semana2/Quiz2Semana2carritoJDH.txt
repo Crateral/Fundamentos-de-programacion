@@ -1,0 +1,204 @@
+PRODUCTOS
+package CarrodeCompras;
+
+import java.io.Serializable;
+
+public class Productos implements Serializable {
+
+    private int id, precio;
+    private String nombre;
+    private String categoria;
+
+    public Productos() {
+    }
+
+    public Productos(int id, int precio, String nombre, String categoria) {
+        this.id = id;
+        this.precio = precio;
+        this.nombre = nombre;
+        this.categoria = categoria;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public int getPrecio() {
+        return precio;
+    }
+
+    public void setPrecio(int precio) {
+        this.precio = precio;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public String getCategoria() {
+        return categoria;
+    }
+
+    public void setCategoria(String categoria) {
+        this.categoria = categoria;
+    }
+
+    @Override
+    public String toString() {
+        return "\nProductos" +
+                " \nid=" + id +
+                " \nPrecio=" + precio +
+                " \nNombre=" + nombre + '\'' +
+                " \nCategoria=" + categoria;
+    }
+}
+
+--------------------------------------------------------------------------
+
+COMPRA
+
+package CarrodeCompras;
+
+public class Compra {
+
+private double calcularIva(Productos p){
+    double total=0.0;
+    if(p.getCategoria().equals("Aseo")){
+        total= (p.getPrecio() *0.19);
+    }
+    System.out.println("IVA= " + total);
+return total;
+
+}
+
+public double calcularTotal(CarritoDeCompra cdc){
+   double total=0.0;
+   for(Productos p : cdc.getProducto()){
+       total += p.getPrecio() + calcularIva(p);
+   }
+
+    return total;
+}
+
+public CarritoDeCompra anadirAlCarrito(Productos p, CarritoDeCompra cdc){
+    cdc.getProducto().add(p);
+
+    return cdc;
+}
+
+}
+-----------------------------------------------------------------------------
+
+
+CARRITO DE COMPRA
+
+
+package CarrodeCompras;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class CarritoDeCompra {
+
+    private int cantidadProd;
+    private List<Productos> producto;
+    private double total;
+    private boolean estado;
+
+    public CarritoDeCompra() {
+        this.cantidadProd=0;
+        this.total=0;
+        this.producto =new ArrayList<Productos>();
+    }
+
+    public int getCantidadProd() {
+        return cantidadProd;
+    }
+
+    public void setCantidadProd(int cantidadProd) {
+        this.cantidadProd = cantidadProd;
+    }
+
+    public List<Productos> getProducto() {
+        return producto;
+    }
+
+    public void setProducto(List<Productos> producto) {
+        this.producto = producto;
+    }
+
+    public double getTotal() {
+        return total;
+    }
+
+    public void setTotal(double total) {
+        this.total = total;
+    }
+
+    public boolean isEstado() {
+        return estado;
+    }
+
+    public void setEstado(boolean estado) {
+        this.estado = estado;
+    }
+}
+--------------------------------------------------------------------------------
+
+PRINCIPAL
+
+package CarrodeCompras;
+
+/*rear un carrito de compras donde se pueda añadir diferentes
+        productos y poder consultarlos todos, consultarlos por categoría,
+        estos productos se deben poder ordenar por precio, por categoría
+        y por nombre.
+*/
+
+import java.sql.SQLOutput;
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class Main {
+
+        public static void main(String[] args) {
+
+            System.out.println("Bienvenidos");
+
+Compra c= new Compra();
+
+CarritoDeCompra cdc =new CarritoDeCompra();
+Productos p = new Productos();
+
+p.setId(001);
+p.setPrecio(23000);
+p.setNombre("Cepillo lavar");
+p.setCategoria("Aseo");
+
+Productos p1 = new Productos();
+
+p1.setId(2);
+p1.setPrecio(18000);
+p1.setNombre("Detergente");
+p1.setCategoria("Aseo");
+
+cdc = c.anadirAlCarrito(p,cdc);
+cdc = c.anadirAlCarrito(p1, cdc);
+
+for(Productos  pro: cdc.getProducto()){
+    System.out.println(pro.toString());
+}
+double total=c.calcularTotal(cdc);
+            System.out.println(total);
+    }
+
+  }
+

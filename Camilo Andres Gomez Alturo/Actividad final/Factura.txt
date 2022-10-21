@@ -1,0 +1,55 @@
+package factura;
+ import  java.util.Scanner;
+public class Factura {
+
+   
+    public static void main(String[] args) {
+   Scanner p1 = new Scanner (System.in);
+   String nombre;
+   double precio;
+   int cantidad;
+   double subTotal;
+   double total;
+   double total2;
+   double impuesto;
+   double IVA=0.19;
+   double descuento=0.1;
+   
+   System.out.println("Que producto quiere comprar");
+     nombre=p1.next();
+   System.out.println("Cual es el precio unitario del producto" +nombre+"?");
+     precio=p1.nextDouble();
+   System.out.println("Cuantas unidades del producto:"+nombre+"Desea llevar?");
+     cantidad=p1.nextInt();
+     subTotal=precio*cantidad;
+     impuesto=subTotal*IVA;
+     total=subTotal+impuesto;
+    
+    if(total>100000){
+       total2=(total)-total*descuento;
+    System.out.println("*******FACTURA*******"+
+                       "\nProducto:"+nombre+
+                       "\nPrecio:"+precio+
+                       "\nCantidad Comprada:"+cantidad+
+                       "\nSubTotal:"+subTotal+
+                       "\nImpuesto:"+impuesto+
+                       "\nTotal:"+total+
+                       "\nDescuento:"+(total*descuento)+
+                       "\nTotal a pagar:"+total2);   
+    
+    }else{
+    System.out.println("*******FACTURA*******"+
+                       "\nProducto:"+nombre+
+                       "\nPrecio:"+precio+
+                       "\nCantidad Comprada:"+cantidad+
+                       "\nSubTotal:"+subTotal+
+                       "\nImpuesto:"+impuesto+
+                       "\nTotal:"+total);  
+    
+    
+    }
+        
+        
+    }
+    
+}
