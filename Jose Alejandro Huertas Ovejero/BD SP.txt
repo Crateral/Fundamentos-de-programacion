@@ -1,0 +1,126 @@
+--FUNCIONES
+
+USE `prueba`;
+
+DROP function IF EXISTS `suma`;
+
+
+DELIMITER $$
+USE `prueba`$$
+
+CREATE FUNCTION `f_suma` (numero1 int,numero2 int )
+
+RETURNS  int
+BEGIN
+
+set @resul_suma=0;
+
+select numero1+numero into @resul_suma;
+
+RETURN @resul_suma;
+
+END
+$$
+
+DELIMITER ;
+
+
+USE `prueba`;
+
+DROP function IF EXISTS `f_resta`;
+
+
+DELIMITER $$
+
+USE `prueba`$$
+
+CREATE FUNCTION `f_resta` (numero1 int,numero2 int)
+
+RETURNS int
+
+BEGIN
+set @resul_resta=0;
+
+select numero1-numero2 into @resul_resta;
+
+RETURN @resul_resta;
+
+END$$
+
+
+DELIMITER ;
+
+USE `prueba`;
+
+DROP function IF EXISTS `f_multiplicar`;
+
+
+DELIMITER $$
+
+USE `prueba`$$
+
+CREATE FUNCTION `f_multiplicar` (numero1 int,numero2 int)
+
+RETURNS int
+
+BEGIN
+
+set @resul_mult=0;
+
+select numero1*numero2  into @resul_mult;
+RETURN @resul_mult;
+
+END$$
+
+
+DELIMITER ;
+
+DELIMITER $$
+USE `prueba`
+$$
+CREATE FUNCTION `f_dividir` (numero1 int,numero2 int)
+
+RETURNS INT
+
+BEGIN
+
+set @resul_divid=0;
+
+select numero1/numero2 into @resul_divid;
+
+RETURN @resul_divid;
+
+END
+$$
+
+DELIMITER ;
+
+_____
+
+Procedimiento
+
+CREATE DEFINER=`root`@`localhost` PROCEDURE `sp_calculadora`(in numero1 int,in numero2 int,out resul_suma int,out resul_resta int,out mult int,out divid int)
+
+BEGIN
+
+	select f_suma(numero1,numero2),f_resta(numero1,numero2),f_multiplicar(numero1,numero2),f_dividir(numero1,numero2)
+into
+  
+  @resul_suma,@resul_resta,@resul_mult,@resul_divid;
+
+END
+_________________
+
+llamar  o correr el procedimiento
+
+set @resul_suma = 0;
+
+set @resul_resta = 0;
+
+set @mult = 0;
+
+set @divid = 0;
+
+call prueba.sp_calculadora(6, 6, @resul_suma, @resul_resta, @mult, @divid);
+
+select @resul_suma, @resul_resta, @mult, @divid;
