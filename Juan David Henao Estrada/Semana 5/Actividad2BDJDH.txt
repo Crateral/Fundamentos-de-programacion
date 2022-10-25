@@ -1,0 +1,104 @@
+Actividades/Actividad2_BD.txt
+
+
+@@ -0,0 +1,6 @@
+Actividad 2 Base de Datos
+
+Crear un SP de calculadora donde contenga las funciones de 
+suma, 
+resta, 
+multiplicacion y 
+division.
+
+Crear las funciones mencionadas anteriormente.
+
+==========================================================
+
+CREATE DATABASE operaciones;
+
+use operaciones;
+
+CREATE TABLE tb_sumar{
+	num1 int;
+	num2 int;
+}
+INSERT INTO tb_sumar VALUES (8, 4);
+
+
+CREATE TABLE tb_restar{
+	num1 int;
+	num2 int;
+}
+INSERT INTO tb_restar VALUES (8, 2);
+
+
+CREATE TABLE tb_multiplicar{
+	num1 int;
+	num2 int;
+}
+INSERT INTO tb_multiplicar VALUES (4, 6);
+
+
+CREATE TABLE tb_dividir{
+	num1 DOUBLE;
+	num2 DOUBLE;
+}
+INSERT INTO tb_dividir VALUES (32, 4);
+
+
+CREATE FUNCTION fnc_sumar(@num1 int, @num2 int)
+returns int 
+
+BEGIN
+	DECLARE @resultado int;
+	set @resultado = @num1 + @num2 ;
+	RETURN @resultado;
+end
+
+
+CREATE FUNCTION fnc_restar(@num1 int, @num2 int)
+returns int 
+
+BEGIN
+	DECLARE @resultado int;
+	set @resultado = @num1 - @num2;
+	RETURN @resultado;
+end
+
+
+CREATE FUNCTION fnc_multiplicar (@num1 int, @num2 int)
+returns int 
+
+BEGIN
+	DECLARE @resultado int;
+	set @resultado = @num1 * @num2;
+	RETURN @resultado;
+end
+
+
+CREATE FUNCTION fnc_dividir(@num1 DOUBLE, @num2 DOUBLE)
+returns DOUBLE 
+
+BEGIN
+	DECLARE @resultado DOUBLE;
+	set @resultado = @num1 - @num2;
+	RETURN @resultado;
+end
+
+
+
+
+
+CREATE PROCEDURE sp_resultados
+
+BEGIN
+	DECLARE @operSuma int ;
+	DECLARE @operResta int;
+	DECLARE @operMultiplica int;
+	DECLARE @operDivision DOUBLE;
+
+	set @operSuma = fnc_sumar();
+	set @operResta = fnc_restar();
+	set @operMultiplica = fnc_multiplicar();
+	set @operDivision = fnc_dividir();
+end
