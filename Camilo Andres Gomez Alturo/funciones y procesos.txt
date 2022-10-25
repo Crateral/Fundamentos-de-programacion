@@ -1,0 +1,104 @@
+
+CAMILO GOMEZ
+
+
+----------- FUNCIONES-----------------------------
+SUMA
+
+
+create function fun_suma
+(
+@N_1 int,
+@N_2 int
+)
+
+returns int
+begin
+declare  @resultado int
+set @resultado = (@N_1 + @N2)
+returns @resultado()
+
+end
+
+-------------------------------------------------------
+
+RESTA
+
+
+create function fun_resta
+(
+@N_1 int,
+@N_2 int
+)
+
+returns int
+begin
+declare  @resultado int
+set @resultado = (@N_1 - @N2)
+returns @resultado()
+
+end
+
+-------------------------------------------------------------
+MULTIPLICACION
+
+create function fun_multiplicacion
+(
+@N_1 int,
+@N_2 int
+)
+
+returns int
+begin
+declare  @resultado int
+set @resultado = (@N_1 * @N2)
+returns @resultado()
+
+end
+
+-----------------------------------------------------------
+DIVICION
+create function fun_divicion
+(
+@N_1 int,
+@N_2 int
+)
+
+returns int
+begin
+declare  @resultado int
+set @resultado = (@N_1 / @N2)
+returns @resultado()
+
+end
+
+------------------------------------------------------------
+
+PROCEDIMIENTO
+
+
+CREATE PROCEDURE  sp_Calculadora ( 
+	IN N_1 int, 
+	IN N_2 int , 
+	IN O_operacion int)
+     R_resultado int (10) = 0
+     
+BEGIN 
+O_oprecion   
+select fun_suma(N_1,N_2) into R_resultado;
+select fun_resta(N_1,N_2) into R_resultado;
+select fun_multiplicacion(N_1,N_2) into R_resultado;
+select fun_divicion(N_1,N_2) into R_resultado;
+END
+
+
+
+
+
+
+
+
+
+
+
+
