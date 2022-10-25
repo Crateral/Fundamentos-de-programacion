@@ -1,0 +1,75 @@
+create database funciones;
+
+use funciones;
+
+create procedure sp_calculadora
+@num1 smallint,
+@num2 smallint,
+@suma smallint output,
+@resta smallint output,
+@multi smallint output,
+@divis smallint output
+as
+set @suma=@num1+@num2
+set @resta=@num1-num2
+set @multi=num1*@num2
+set @divis=0
+if @num2 <>0
+begin
+set @divis=@num1/@num2
+end
+----------------------
+use funciones;
+
+DECLARE (@suma smallint, @resta smallint, @multi smallint, @divis smallint)
+EXEC calculadora 10, 26, @suma output , @resta output, @multi output, @divis output
+SELECT 'la suma es:' AS suma, @suma AS VALOR
+SELECT 'la resta es:' AS resta, @resta AS VALOR
+SELECT 'la multiplicación es:' AS multi, @multi AS VALOR
+SELECT 'la división es:' AS divis, @divis AS VALOR
+----------------------
+
+create fuction func_suma(@num1 smallint,@num2 smallint)
+return smallint
+
+Begin
+set @suma=@num1+@num2
+return @resulSuma;
+
+end
+
+create fuction func_resta(@num1 smallint,@num2 smallint)
+return smallint
+
+Begin
+set @resta=@num1-num2
+return @resulResta
+
+end
+
+create fuction func_multi(@num1 smallint,@num2 smallint)
+return smallint
+
+Begin
+set @multi=num1*@num2
+return @resulMulti
+
+end
+
+create fuction func_divis(@num1 smallint,@num2 smallint)
+return smallint
+
+Begin
+if @num2 <>0
+ELSE
+set @divis=@num1/@num2
+return @resulDivis
+
+end
+----------------------
+call pro_sumar(10,26);
+call pro_resta(10,26);
+call pro_multi(10,26);
+call pro_divis(10,26);
+SELECT @resultsuma,@resultResta,@resultMult,@resultDiv;
+
