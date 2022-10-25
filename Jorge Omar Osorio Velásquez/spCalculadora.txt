@@ -1,0 +1,92 @@
+funcion suma
+create or replace function Suma (iDigito1 in number, iDigito2 in number) return number is  
+begin
+    return (iDigito1 + iDigito2);
+end;
+/
+funcion resta
+create or replace function Resta (iDigito1 in number, iDigito2 in number) return number is  
+begin
+    return (iDigito1 + iDigito2);
+end;
+/
+funcion multiplicacion
+create or replace function Multiplicacion (iDigito1 in number, iDigito2 in number) return number is  
+begin
+    return (iDigito1 + iDigito2);
+end;
+/
+funcion division
+create or replace function Division (iDigito1 in number, iDigito2 in number) return number is  
+begin
+    return (iDigito1 + iDigito2);
+end;
+/
+-- Funcion para validar parámetros
+create or replace  function ValidaParametros (iOperacion in number, iDigito1 in number, iDigito2 in number) return boolean is  
+begin
+    if iOperacion < 0 or iOperacion > 4 or  iOperacion is null then
+        dbms_output.put_line ('Error en Operacion debe ser 1-Suma, 2-Resta,3-Multiplicacion o 4-Division');
+        return false;
+    elsif iOperacion = 4 and iDigito2 = 0  then
+        dbms_output.put_line ('No se permite división por cero');
+        return false;
+    else
+        return true;        
+    end if;
+   
+end;
+/
+--procedimiento Calculadora
+create or replace  procedure Calculadora (inuOperacion in number, inuDigito1 in number, inudigito2 in number, oResultado out number) is
+begin
+
+    -- Si devuelve verdadero los parametrs
+    if ValidaParametros(inuOperacion,inuDigito1, inudigito2 ) then
+        -- Ejecuta cada una de las operaciones
+        if inuOperacion = 1 then oResultado := Suma(inudigito1, inudigito2); end if;
+        --if inuOperacion = 2 then oResultado := Resta (inudigito1, inudigito2) end if;
+            if inuOperacion = 3 then oResultado := Multiplicacion (inudigito1, inudigito2); end if;
+             if inuOperacion = 4 then oResultado := Division (inudigito1, inudigito2); end if;
+
+funcion suma
+create or replace function Suma (iDigito1 in number, iDigito2 in number) return number is  
+begin
+    return (iDigito1 + iDigito2);
+end;
+/
+    end if;
+
+end;
+/
+
+
+-- llamado al procedimiento
+DECLARE
+  INUOPERACION NUMBER;
+  INUDIGITO1 NUMBER;
+  INUDIGITO2 NUMBER;
+  ORESULTADO NUMBER;
+
+BEGIN
+  INUOPERACION := 4;
+  INUDIGITO1 := 3;
+  INUDIGITO2 := 0;
+  ORESULTADO := NULL;
+
+  CALCULADORA ( INUOPERACION, INUDIGITO1, INUDIGITO2, ORESULTADO );
+  DBMS_OUTPUT.PUT_LINE ( 'ORESULTADO = ' || ORESULTADO );
+END;
+
+dos pruebas 
+Operacion 1 digito 1:  3 digito 2: 5
+Operacion 2 digito 1:  3 digito 2: 5
+Operacion 3 digito 1:  8 digito 2: 9
+Operacion 4 digito 1:  7 digito 2: 6
+--- Resultado ejecución
+ORESULTADO = 8
+No se permite división por cero
+ORESULTADO =
+
+ 
+--

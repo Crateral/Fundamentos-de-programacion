@@ -1,0 +1,99 @@
+-------------------------------------------- STORE PROCEDURE --------------------------------------------------
+
+DELIMITER $$
+
+CREATE PROCEDURE sp_operaciones(in num1 int,in num2 int,out res_m int,out res_s int,out res_r int, out res_d double)
+BEGIN
+set @res_m=0,@res_d=0,@res_s=0,@res_r=0; 
+
+select fun_multi(num1,num2) into res_m;
+select fun_sum(num1,num2) into res_s;
+select fun_res(num1,num2) into res_r;
+select fun_div(num1,num2) into res_d;
+END
+
+
+DELIMITER ;
+;
+
+-------------------------------------------- FUNCIONES --------------------------------------------------
+
+------------------- MULTIPLICACION --------------
+
+DELIMITER $$
+CREATE FUNCTION fun_multi(num1f int,num2f int) RETURNS int
+    DETERMINISTIC
+BEGIN
+set @res_mf=0;
+    select num1f*num2f into @res_mf;
+  
+RETURN @res_mf;
+END
+
+DELIMITER ;
+;
+
+
+------------------------ SUMA -------------------
+
+
+CREATE FUNCTION fun_sum(num1f int,num2f int) RETURNS int
+    DETERMINISTIC
+BEGIN
+set @res_s=0;
+    select num1f+num2f into @res_s;
+  
+RETURN @res_s;
+END
+
+
+DELIMITER ;
+;
+
+------------------------ RESTA -------------------
+
+
+DELIMITER $$
+CREATE FUNCTION fun_res(num1f int,num2f int) RETURNS int
+    DETERMINISTIC
+BEGIN
+set @res_r=0;
+    select num1f-num2f into @res_r;
+RETURN @res_r;
+END
+
+
+DELIMITER ;
+;
+
+
+
+------------------------ DIVISION -------------------
+
+DELIMITER $$
+
+CREATE FUNCTION fun_div(num1f int,num2f int) RETURNS double
+    DETERMINISTIC
+BEGIN
+set @res_d=0;
+
+	if num2f=0 then
+		set	@res_d=0;
+	else
+		select num1f/num2f into @res_d;
+	end if;
+
+RETURN @res_d;
+END
+
+
+DELIMITER ;
+;
+
+
+-------------------------------------------- CONSULTA --------------------------------------------------
+
+call sp_operaciones2(4,0,@res_m,@res_s,@res_r,@res_d);
+select @res_m as multiplicacion, @res_s as suma,@res_r as resta,@res_d as division;
+
+
