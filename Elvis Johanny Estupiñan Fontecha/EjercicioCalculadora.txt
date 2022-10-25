@@ -1,0 +1,57 @@
+CREATE database Calculadora
+use database Calculadora
+
+CREATE function fnc_suma (@num1 float, @num2 float)
+returns float
+
+BEGIN	
+	declare @resultado float;
+	SET @resultado = @num1 + @num2;
+	return @resultado;
+END
+
+
+CREATE function fnc_resta (@num1 float,  @num2 float)
+returns float
+
+BEGIN	
+	declare @resultado float;
+	SET @resultado = @num1 - @num2;
+	return @resultado;
+END
+
+CREATE function fnc_multiplicacion (@num1 float,  @num2 float)
+returns float
+
+BEGIN	
+	declare @resultado float;
+	SET @resultado = @num1 * @num2;
+	return @resultado;
+END
+
+CREATE function fnc_division (@num1 float,  @num2 float)
+returns float
+
+BEGIN	
+	declare @resultado float;
+	SET @resultado = @num1 / @num2;
+	return @resultado;
+END
+
+
+
+create procedure sp_CalResultados
+
+BEGIN
+	declare @resultSuma float;
+	declare @resultResta float;
+	declare @resultMult float;
+	declare @resultDiv float;
+
+	set @resultSuma = fnc_suma (10, 2);
+	set @resultSuma = fnc_resta (10, 2);
+	set @resultSuma = fnc_multiplicacion (10, 3);
+	set @resultSuma = fnc_division (10, 3);	
+
+	
+END
