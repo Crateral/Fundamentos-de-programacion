@@ -75,13 +75,18 @@ BEGIN
 	RETURN @resultado;
 end
 
-
+-- corregido
+-- corregido
 CREATE FUNCTION fnc_dividir(@num1 DOUBLE, @num2 DOUBLE)
 returns DOUBLE 
 
 BEGIN
 	DECLARE @resultado DOUBLE;
-	set @resultado = @num1 - @num2;
+	if (@num2==0)
+	 print "NO SE PUEDE DIVIDIR POR CERO";
+	ElSE 
+         set @resultado= @num1 / @num2; 
+	
 	RETURN @resultado;
 end
 
