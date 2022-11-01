@@ -1,0 +1,28 @@
+
+una empresa de mensajeria
+
+tener a los grupos organizados por zonas 
+
+tener unas listas de cada persona a la que se le va a entrgar su 
+respectivo paquete
+
+cada dia se asignan la ruta de paquetes a entregar y si no se hizo la entrega del dia anterior reactivar la fecha de entrega
+y asi sucesivamente hasta llegar al  final de la semana y asi ir entregando lista de perosnas completadas 
+
+
+un impedimiento no tener la direccion correcta de la persona se devera llamar al cliente y verificar los datos 
+
+
+
+
+
+empresa de ventas de ropa 
+
+se asignaran los vendedores por categoria 
+
+cada vendedor tendra una tarea diaria como clasificar ropa, etiquetar y organizar,  
+el vendedor tendra la tarea diaria de atraer clientes por medio de los descuentos que la empresa genera semanalmente  y rotar el stock que hay en inventario
+logrando asi tener un mejor flujo de mercancia. 
+hacer una reunion todos los dias antes de comenzar a lavorar de que es lo que hice el dia anterior, cuantos clientes atraje y que voy hacer hoy 
+
+un impedimiento que el inventario este vasio 
