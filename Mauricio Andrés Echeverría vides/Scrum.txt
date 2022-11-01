@@ -1,0 +1,62 @@
+Actividad Scrum⨃
+
+escenario: 
+
+empresa de mensajeria
+
+Scrum: 
+
+caso de negocio- empresa de mensajeria
+vision del proyecto- correspondencia satisfactoria y correcta hacia los clientes
+
+priorizar productos- S.I con login, conexion con mapa satelital,
+ubicacion exacta de envio.
+
+planificacion: sprint durante 2 a 4 semanas
+
+dailys de maximo 15min para informar que hice, que voy hacer y que impedimentos tengo
+
+impedimentos: no tener vehiculo de trasporte de correspondencia, no tener la ubicacion
+exacta del remitente.
+
+que hice: el login del S.I
+
+que hare: mapeo exacto de utilizando google maps satelital para una mejor ruta.
+ 
+entregables: semana 2: sistema de login e interfaz completa y funcional
+entregables: semana 4: mapeo general de rutas y ubicaciones accesibles
+------------------------------------------------------------------------------
+------------------------------------------------------------------------------
+
+escenario#2: 
+
+empresa de ropa: 
+
+Scrum: 
+
+caso de negocio- empresa de ropa
+vision del proyecto- inovacion de estilos y moda organica
+
+priorizar productos- verificacion de calidad de textiles, demanda comercial, 
+accesiiblidad de compra, moda amigable ambientalmente
+
+planificacion: sprint durante 4 semanas
+
+dailys de maximo 15min para informar que hice, que voy hacer y que impedimentos tengo
+
+impedimentos: poca demanda comercial causando bajos ingresos
+
+que hice: verifique la calidad de las telas de nuestros productos
+
+que hare: investigacion de como crear ropa organica. 
+
+entregables: semana 2: informe de calidad de comercio textil
+entregables: semena 3: investigacion completa de la reutilizacion de la ropa usada
+entregables: semana 4: mapeo general de una encuesta social sobre preferencia de moda
+actual. 
+
+------------------------------------------------------------------------------
+------------------------------------------------------------------------------
+
+
+
