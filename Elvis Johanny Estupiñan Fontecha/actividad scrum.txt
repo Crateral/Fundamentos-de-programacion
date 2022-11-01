@@ -1,0 +1,42 @@
+Definir qué se quiere conseguir
+
+
+Se requiere mejorar tiempos de entrega de la mensajeria 
+
+organizar un equipo
+
+planear rutas 
+definir zonas de reparto
+
+programar reuniones diarias de 15 mins donde mirara la ruta, sefijara objetivo diario a cada miembro donde se buscara minimizar tiempo y gastos de las entregas
+
+al final del dia se mira resultado y se buscara como se puede mejorar para el siguiente dia las rutas realizadas y que se debe cambiar.
+
+
+empresa de venta de ropa
+
+
+mejorar ventas
+
+
+equipo de trabajo
+comerciales 
+
+sprint donde se mirara ventas y resultados 
+poner meta de ventas diarias
+
+se validara que se hizo el dia anterior y que se puede hacer mañana para mejorar ventas 
+
+catalogos
+ventas en redes sociales 
+visita a proveedores--- mejorar rutas y zonas 
+actualizar base de datos de clientes 
+
+se buscara mejorar cantidad de ventas y reducir tiempos de respuesta
+
+ 
+
+al final del dia se mira resultado y se buscara como se puede mejorar para el siguiente dia las rutas realizadas y que se debe cambiar.
+
+
+
