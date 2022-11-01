@@ -1,0 +1,46 @@
+Product Owner(Dueños de los paquetes)
+
+Scrum Master es el gerente de la sucursal de mensajeria el cual nos 
+dice a nosotros los mensajeros el numero de paquetes o paquetes dque 
+tenemos que entregar en determinado tiempo. Y cumpliendo con las 
+condiciones de calidad minimas. Delimitando al personal por zonas
+para entregar paquetes en dichas zonas.
+
+
+Nos dice el product Backlog o requisitos minimos que tenemos
+que cumplir para que el paquete se entregue en los tiempos estipulados y
+en condiciones fisicas optimas
+por la empresa.
+
+Se hace un Dayly en las mañanas de 5 minutos, donde los repartidores
+dicen si tuvieron incomveneientes mecanicos o climatologicos que haya 
+evitados que la meta de numero de paquetes diarios no se haya podido cumplir,
+las metas a cumplir hoy segun las condiciones de los vehiculos, trafico y clima.
+y el consolidaddo de paquetes o pronostico que se tiene para entregar a fin de mes.
+
+aL final de la jornada enviar un ticket o notificacion tanto al que envia el paquete,
+como al que lo recibe notificandoles que la entrega de su paquete fue exitosa.
+
+________________________________________________________________________
+
+Product Owner (Dueño de la fabrica)
+
+Scrum master es el dueño del almacen o tienda fisica de venta de ropa, la cual al inicio de la jornada
+hace una pequeña reunion avisando por el numero de ventas realizada el dia inmediatamente
+anterior, la meta que tiene para este dia y para los siguentes dias, dependiendo del cargo de cada persona y
+de la temporada. Se informa si dicha tienda fisica estuvo en el promedio de ventas en
+comparacion con en resto de tiendas a nivel nacional.
+
+Como product Backlog o requisitos minimos que debemos de cumplir (Durante la temporada) como lo puede ser la buena presentacion
+ y atencion al comprador, resolviendo cualquier duda de ubicacion, disponibilidad de los
+productos que hay en la tienda. Y el numero de ventas que se pronostica que tenga la tienda para un
+semestre.
+
+A fin de mes se entrega un consolidado de ventas de ropa(Sprint Backlog), se notifica a la empresa
+fabricante cada fin de semana el numero de ventas realizado, lo pronosticado para el mes
+ y para todo el año.
+
+Si el pronostico de ventas no se esta cumpliendo se estudia posibles causas, y soluciones
+para cumplir metas pronosticadas y establecidas desde un inicio. R realizar cambios en la
+forma como se hace publicidad de la tienda o producto, o cambios mas profundos como ver
+la carga laboral de los empleados.
