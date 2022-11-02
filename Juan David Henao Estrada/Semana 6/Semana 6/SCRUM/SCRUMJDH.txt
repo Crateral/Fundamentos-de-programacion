@@ -1,0 +1,31 @@
+
+EMPRESA DE MENSAJERIA
+
+coordinacion de recogida de mercancia:
+se realizaria un Daily en la mañana para coordinar y distibuir las rutas
+al personal encargado.
+esto se realizaria dividiendo la ciudad por zonas.
+tener en cuenta el tamaño de la mercancia a recoger en este caso no se 
+enviaria moto sino vehiculo con la capacidad requerida.
+
+Coordinacion de reparto de mercancia:
+planning y daily en la mañana para coordinar reparto que proviene de otras ciudades
+teniendo en ciuenta zona de reparto y tamaño de mercancia.
+
+durante el dia tener comunicacion empresa-empleado para indicaciones a los empleados 
+encargados de recogida de mercancia si hay novedad, es decir, recogida de nueva mercancia
+en su respectivo recorrido. De no lograr incluir recorrido se programaria para el dia siguiente.
+
+
+EMPRESA VENTA DE ROPA
+
+Planning y daily en la mañana para organizar exhibicion ya sea fisica o virtual, (como rotacion de inventario y para ofrecer 
+productos en stock), de esta manera se revisa productos en stock que se requieran 
+pedir al proveedor.
+revisar cuentas para saber con que dinero disponemos para solicitar al proveedor nuevos productos 
+y tener en cuenta la prioridad de productos que requerimos, como puede ser por producto o articulo 
+de mas venta.
+     
+
+
+
