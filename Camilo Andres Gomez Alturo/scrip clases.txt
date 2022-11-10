@@ -1,0 +1,171 @@
+
+camilo gomez
+
+
+
+ public class Usuario {
+
+   
+   private String nombre;
+   private String apellido;
+   private int telefono;
+   private String usuario;
+   private String contraseña;
+
+    public Usuario(String nombre, String apellido, int telefono, String usuario, String contraseña) {
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.telefono = telefono;
+        this.usuario = usuario;
+        this.contraseña = contraseña;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public String getApellido() {
+        return apellido;
+    }
+
+    public void setApellido(String apellido) {
+        this.apellido = apellido;
+    }
+
+    public int getTelefono() {
+        return telefono;
+    }
+
+    public void setTelefono(int telefono) {
+        this.telefono = telefono;
+    }
+
+    public String getUsuario() {
+        return usuario;
+    }
+
+    public void setUsuario(String usuario) {
+        this.usuario = usuario;
+    }
+
+    public String getContraseña() {
+        return contraseña;
+    }
+
+    public void setContraseña(String contraseña) {
+        this.contraseña = contraseña;
+    }
+   
+   
+    
+}
+----------------------------------------------------------------------------------------------------------------
+
+
+
+public class Administrador extends Usuario {
+    private int codigo_administrador;
+    
+    public Administrador (String nombre, String apellido, int telefono, String usuario, String contraseña,int codigo_administrador ){
+    super(nombre,apellido,telefono,usuario,contraseña);
+    this.codigo_administrador = codigo_administrador;
+    }
+    
+    
+    public void registrarDatos(){
+    System.out.println("registro de datos"+
+                       "\nNombre:"+getNombre()+
+                       "\nApellido:"+getApellido()+
+                       "\nTelefono:"+getTelefono()+
+                       "\nUsuario:"+getUsuario()+
+                       "\nContraseña"+getContraseña());
+    ------------------------------------------------------------------------------------------------------------------------
+
+public class Cliente extends Usuario {
+    private int codigo_cliente;
+
+    public Cliente(String nombre, String apellido, int telefono, String usuario, String contraseña,int codigo_cliente ) {
+        super(nombre, apellido, telefono, usuario, contraseña);
+        this.codigo_cliente = codigo_cliente;
+        }
+    
+         public void datosCliente(){
+         System.out.println("********DATOS DEL CLIENTE********");
+         System.out.println("su nombre es:"+this.getNombre());
+         System.out.println("su apellido es:"+this.getApellido());
+         System.out.println("su telefono es"+this.getTelefono());
+         System.out.println("su codigo es"+this.codigo_cliente);
+         
+         }
+
+    
+         
+    
+}
+--------------------------------------------------------------------------------------------------------------------------------
+
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+
+public class Principal {
+    int opcion = 0;
+    Scanner sc = new Scanner(System.in);
+        
+    ArrayList<Usuario> usuario = new ArrayList<>();
+    
+     int limite = 0;               
+       while (limite == 0){ 
+    
+        System.out.println(" ***************");   
+        System.out.println(" * SISTEMA GYM *");
+       System.out.println( " ***************");
+       System.out.println( "1* REGISTRAR   *");
+       System.out.println( "2* INGRESAR    *");
+       System.out.println( "3* SALIR       *");
+       System.out.println( "****************"); 
+        sc.nextInt();
+       
+       switch(opcion){
+       
+           case 1:
+               System.out.println("ingrese nombre");
+                sc.nextInt();
+               System.out.println("ingrese apellido");
+               sc.nextInt();
+               System.out.println("ingrese telefono ");
+               sc.nextInt();
+               System.out.println("nombre de usuario");
+               sc.nextInt();
+               System.out.println("contraseña");
+               sc.nextInt();
+            {
+                Usuario u1 = new Usuario (nombre,apellido,0,usuario,contraseña);
+                usuario.add(u1);
+            }
+            break;
+
+               
+           case 2:
+              for(int i=0;i<Usuario.size();i++){
+                   System.out.println("Usuario:"+usuario.get(i).getUsuario());
+               
+              break; 
+              
+           case 3:
+               System.out.println( "SALISTE");
+               limite = 1;
+               
+               break;
+            
+           default:
+                System.out.println("ESTA OPCION NO ES VALIDA");  
+               
+       }
+       }
+    }
