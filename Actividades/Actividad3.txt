@@ -1,7 +1,0 @@
-Taller herencia:
-
-1. Realizar la implmentacion y separacion de figuras geometricas
-2. Realizar la implementacion de la estructura de un Vehiculos
-3. Realizar la estructura de una empresa de transporte de mercancia (personal, vehiculos, etc...)
-
-Se deben definir los atributos y metodos pertinentes, asi mismo crear la o las clases madres e hijas.

@@ -1,8 +1,0 @@
-CREATE TABLE Animal(
-id INT,
-nombre VARCHAR(150),
-PRIMARY KEY('id'));
-
-SELECT * FROM Animal;
-INSERT INTO Animal(id,nombre) values (01,'Gato');
-SELECT (Columnas) from Esquema.nombreTabla;

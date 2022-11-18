@@ -1,7 +1,0 @@
-Actividad 2:
-
-1. Crear las siguiente Clase: Operaciones
-	1.1 Crear los siguientes metodos:
-		Suma, resta, multiplicacion y division (no sebe ser posible dividir por 0)
-	1.2 Realizar la implementacion de los metodos, es decir, debo poder sumar restar multiplicar y dividir
-2. Crear una clase donde tenga 2 metoso implementados: Cronometro, temporizador.

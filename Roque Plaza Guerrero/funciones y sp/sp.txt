@@ -1,7 +1,0 @@
-
-set @resultsuma=0;
-set @resultMult=0;
-set @resultDiv= 0;
-set @resultRest=0;
-CALL procedimiento (6,2,@resultsuma,@resultMult,@resultDiv,@resultRest);
-SELECT @resultsuma,@resultMult,@resultDiv,@resultRest;
