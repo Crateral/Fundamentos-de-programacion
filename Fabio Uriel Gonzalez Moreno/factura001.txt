@@ -1,0 +1,29 @@
+                                       Factura N°. 123123
+*********************************************************
+                   EMPRESA: Ecommerce
+*********************************************************
+                               NIT: 258933-6
+                               DIRECCION: Calle 25 # 36-85
+                               TELEFONO:  3632290
+*********************************************************
+DATOS DEL CLIENTE:                                       
+*********************************************************
+Nombre Cliente: Fabio 
+Correo: fabiogonzalezmoreno@gmail.com
+Ciudad: Bogota
+Direccion: Calle 23#-17-77
+Telefono: 3175479621
+*********************************************************
+PRODUCTOS:                                               
+*********************************************************
+*********************************************************
+ID                NOMBRE                           PRECIO
+2                 Lavadora Secadora                580000.0
+3                 Super MAn                        75000.0
+4                 Balon Futbol                     95000.0
+5                 Balon Basket Ball                85000.0
+6                 Caba de la noche                 105000.0
+*********************************************************
+                        Valor Total con IVA:       1118600.0
+                            Valor Envio:           55930.0
+                            Total a Pagar:         1174530.0

@@ -1,0 +1,6 @@
+001|    "TV" 	 |15| 250000 | true |0.19| "full hd" | "jpa" |SAMSUNG|ELETRODOMESTICOS|
+002| "celular" |20| 200000 | true |0.13| "   17' " | "jpa" |ASUS|TECNOLOGIA|
+003| "Balon"	 |20| 320000 | true |0.13| "   17' " | "jpa" |ASUS|JUGUETERIA|
+004| "camion   " |50| 20000  | true |0.13| "   17' " | "jpa" |ASUS|JUGUETERIA|
+005| "camisa" |10| 50000  | true |0.13| "   17' " | "jpa" |ASUS|ROPA|
+006| "Batman   " |50| 20000  | true |0.13| "   Liga " | "jpa" |ASUS|JUGUETERIA|
